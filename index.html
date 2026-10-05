@@ -28,7 +28,7 @@
       width: 297mm;
       height: 210mm;
       position: relative;
-      padding: 6mm 10mm 4mm 10mm;
+      padding: 8mm 10mm 6mm 10mm;
       background-color: #FFFFFF;
       margin: 0 auto 10mm auto;
       page-break-after: always;
@@ -45,11 +45,11 @@
     }
 
     /* =========================================================
-       ENCABEZADO MAESTRO (PÁGINA 1) - TIPOGRAFÍA +2
+       ENCABEZADO MAESTRO IDÉNTICO A LA IMAGEN (PÁGINA 1)
        ========================================================= */
     .master-header-container {
       width: 277mm;
-      margin-bottom: 1.5mm;
+      margin-bottom: 2mm;
     }
 
     .master-header-top {
@@ -57,8 +57,8 @@
       justify-content: space-between;
       align-items: flex-start;
       border-bottom: 1.2px solid #CBD5E1;
-      padding-bottom: 1.2mm;
-      margin-bottom: 1.5mm;
+      padding-bottom: 1.5mm;
+      margin-bottom: 1.8mm;
     }
 
     .brand-col-left {
@@ -67,7 +67,7 @@
     }
 
     .brand-title {
-      font-size: 16.5px; /* +2 */
+      font-size: 14.5px;
       font-weight: 800;
       letter-spacing: 1.2px;
       color: #1E293B;
@@ -76,37 +76,38 @@
     }
 
     .brand-subtitle {
-      font-size: 12px; /* +2 */
+      font-size: 10px;
       font-weight: 700;
       letter-spacing: 0.5px;
       color: #0284C7;
-      margin-top: 0.5mm;
+      margin-top: 0.6mm;
       text-transform: uppercase;
     }
 
     .brand-col-right {
       text-align: right;
-      font-size: 10.5px; /* +2 */
+      font-size: 8.5px;
       color: #475569;
-      line-height: 1.3;
+      line-height: 1.35;
     }
 
     .brand-col-right strong {
       color: #1E293B;
     }
 
+    /* Recuadro de resumen con cintillo azul a la izquierda */
     .overview-callout {
       background-color: #F8FAFC;
       border: 1px solid #E2E8F0;
       border-left: 3.5px solid #0284C7;
-      padding: 1.2mm 2.5mm;
+      padding: 1.6mm 2.8mm;
       border-radius: 2px;
-      margin-bottom: 1.5mm;
+      margin-bottom: 2mm;
     }
 
     .overview-callout p {
-      font-size: 9.6px; /* +2 */
-      line-height: 1.3;
+      font-size: 7.6px;
+      line-height: 1.35;
       color: #334155;
     }
 
@@ -118,19 +119,19 @@
     .section-ribbon {
       background-color: #0F2C59;
       color: #FFFFFF;
-      padding: 1.2mm 3mm;
-      font-size: 9.5px; /* +2 */
+      padding: 1.4mm 3mm;
+      font-size: 7.5px;
       font-weight: 700;
       letter-spacing: 0.8px;
       text-transform: uppercase;
       border-radius: 2px;
-      margin-bottom: 1.5mm;
+      margin-bottom: 2mm;
     }
 
     /* Contenedores de Imagen */
     .hero-container-page1 {
       width: 277mm;
-      height: 107mm;
+      height: 111mm;
       overflow: hidden;
       border-radius: 3px;
       background-color: #0F172A;
@@ -138,7 +139,7 @@
 
     .hero-container-standard {
       width: 277mm;
-      height: 120mm;
+      height: 124.65mm;
       overflow: hidden;
       border-radius: 3px;
       background-color: #0F172A;
@@ -146,7 +147,7 @@
 
     .hero-container-compact {
       width: 277mm;
-      height: 25mm;
+      height: 28mm;
       overflow: hidden;
       border-radius: 3px;
       background-color: #0F172A;
@@ -160,7 +161,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 10px; /* +2 */
+      font-size: 8px;
       font-weight: 600;
       letter-spacing: 0.5px;
       text-transform: uppercase;
@@ -177,7 +178,7 @@
     /* Ficha y Tablas */
     .executive-section {
       width: 277mm;
-      margin-top: 1.5mm;
+      margin-top: 2mm;
     }
 
     .header-bar {
@@ -185,25 +186,25 @@
       justify-content: space-between;
       align-items: flex-end;
       border-bottom: 1.5px solid #0F2C59;
-      padding-bottom: 1.2mm;
-      margin-bottom: 1.5mm;
+      padding-bottom: 1.5mm;
+      margin-bottom: 1.8mm;
     }
 
     .title-group {
       display: flex;
       flex-direction: column;
-      gap: 0.4mm;
+      gap: 0.5mm;
     }
 
     .asset-title {
-      font-size: 15px; /* +2 */
+      font-size: 13px;
       font-weight: 700;
       color: #0F172A;
       line-height: 1.1;
     }
 
     .asset-subtitle {
-      font-size: 10.5px; /* +2 */
+      font-size: 8.5px;
       font-weight: 600;
       color: #64748B;
       letter-spacing: 0.3px;
@@ -211,7 +212,7 @@
     }
 
     .price-value {
-      font-size: 19.5px; /* +2 */
+      font-size: 17.5px;
       font-weight: 800;
       color: #0F2C59;
       line-height: 1;
@@ -225,7 +226,7 @@
 
     .metrics-table th, .metrics-table td {
       border: 1px solid #E2E8F0;
-      padding: 1.2mm 1.6mm;
+      padding: 1.4mm 1.8mm;
       vertical-align: top;
       text-align: left;
     }
@@ -233,7 +234,7 @@
     .metrics-table th {
       background-color: #F8FAFC;
       color: #475569;
-      font-size: 9.2px; /* +2 */
+      font-size: 7.2px;
       font-weight: 700;
       letter-spacing: 0.4px;
       text-transform: uppercase;
@@ -241,13 +242,13 @@
     }
 
     .metrics-table td {
-      font-size: 10px; /* +2 */
+      font-size: 8px;
       line-height: 1.2;
       color: #1E293B;
     }
 
     .cell-bold { font-weight: 700; color: #0F2C59; }
-    .cell-muted { color: #64748B; font-size: 9.5px; /* +2 */ }
+    .cell-muted { color: #64748B; font-size: 7.5px; }
     .col-concept { width: 22%; }
     .col-market  { width: 17%; }
     .col-keys    { width: 8%; text-align: center; }
@@ -262,18 +263,18 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      font-size: 9.5px; /* +2 */
+      font-size: 7.5px;
       font-weight: 600;
       color: #94A3B8;
       letter-spacing: 0.8px;
       text-transform: uppercase;
       border-top: 1px solid #F1F5F9;
-      padding-top: 1mm;
+      padding-top: 1.2mm;
     }
 
     /* Página 14 Resumen */
     .summary-box {
-      margin-top: 1.5mm;
+      margin-top: 2mm;
       border: 1.5px solid #0F2C59;
       border-radius: 3px;
       overflow: hidden;
@@ -281,19 +282,19 @@
     .summary-header {
       background-color: #0F2C59;
       color: #FFFFFF;
-      font-size: 10px; /* +2 */
+      font-size: 8px;
       font-weight: 700;
-      padding: 1mm 2.2mm;
+      padding: 1.2mm 2.5mm;
       letter-spacing: 0.8px;
       text-transform: uppercase;
     }
     .summary-table {
       width: 100%;
       border-collapse: collapse;
-      font-size: 9.5px; /* +2 */
+      font-size: 7.5px;
     }
     .summary-table th, .summary-table td {
-      padding: 0.8mm 1.8mm;
+      padding: 1mm 2mm;
       border: 1px solid #E2E8F0;
     }
     .summary-table th {
@@ -302,10 +303,10 @@
       font-weight: 700;
     }
     .legal-notice {
-      font-size: 8.8px; /* +2 */
+      font-size: 6.8px;
       color: #64748B;
       line-height: 1.2;
-      margin-top: 1.2mm;
+      margin-top: 1.5mm;
       font-style: italic;
     }
   </style>
@@ -327,7 +328,7 @@
           </div>
         </div>
         <div class="overview-callout">
-          <p><strong>Master Inventory Overview:</strong> Consolidated underwriting schedule of all 27 hospitality assets across Caribbean, Pacific, Baja Peninsula, and key Mexican metropolitan centers. Sequenced strictly in descending order of asking price ($600.0M to $3.4M USD)[span_1](start_span)[span_1](end_span).</p>
+          <p><strong>Master Inventory Overview:</strong> Consolidated underwriting schedule of all 27 hospitality assets across Caribbean, Pacific, Baja Peninsula, and key Mexican metropolitan centers. Sequenced strictly in descending order of asking price ($600.0M to $3.4M USD).</p>
         </div>
       </div>
 
@@ -361,7 +362,7 @@
               <td class="col-keys text-center cell-bold">650</td>
               <td class="col-price text-center cell-bold">$600.0M</td>
               <td class="col-cap text-center cell-bold">5.00% / 6.70%</td>
-              <td class="col-thesis"><strong>Operating</strong> &bull; Trophy oceanfront asset, high operational scale, premier ADR in core Caribbean tourist corridor[span_2](start_span)[span_2](end_span).</td>
+              <td class="col-thesis"><strong>Operating</strong> &bull; Trophy oceanfront asset, high operational scale, premier ADR in core Caribbean tourist corridor.</td>
             </tr>
           </tbody>
         </table>
@@ -407,7 +408,7 @@
               <td class="col-keys text-center cell-bold">500</td>
               <td class="col-price text-center cell-bold">$515.0M</td>
               <td class="col-cap text-center cell-bold">4.50% / 6.20%</td>
-              <td class="col-thesis"><strong>Operating</strong> &bull; Elite Los Cabos location, resilient USD revenues, robust high-yield profile and high barriers to entry[span_3](start_span)[span_3](end_span).</td>
+              <td class="col-thesis"><strong>Operating</strong> &bull; Elite Los Cabos location, resilient USD revenues, robust high-yield profile and high barriers to entry.</td>
             </tr>
           </tbody>
         </table>
@@ -453,7 +454,7 @@
               <td class="col-keys text-center cell-bold">497</td>
               <td class="col-price text-center cell-bold">$480.0M</td>
               <td class="col-cap text-center cell-bold">4.80% / 6.50%</td>
-              <td class="col-thesis"><strong>Operating</strong> &bull; Institutional-grade high-rise asset in top-performing corridor with high year-round international occupancy[span_4](start_span)[span_4](end_span).</td>
+              <td class="col-thesis"><strong>Operating</strong> &bull; Institutional-grade high-rise asset in top-performing corridor with high year-round international occupancy.</td>
             </tr>
           </tbody>
         </table>
@@ -499,7 +500,7 @@
               <td class="col-keys text-center cell-bold">255</td>
               <td class="col-price text-center cell-bold">$260.0M</td>
               <td class="col-cap text-center cell-bold">4.70% / 6.40%</td>
-              <td class="col-thesis"><strong>Operating</strong> &bull; Oceanfront trophy property with proven cash flow, established luxury recognition, and strong ADR resilience[span_5](start_span)[span_5](end_span).</td>
+              <td class="col-thesis"><strong>Operating</strong> &bull; Oceanfront trophy property with proven cash flow, established luxury recognition, and strong ADR resilience.</td>
             </tr>
           </tbody>
         </table>
@@ -545,7 +546,7 @@
               <td class="col-keys text-center cell-bold">340</td>
               <td class="col-price text-center cell-bold">$110.0M</td>
               <td class="col-cap text-center cell-bold">5.20% / 7.00%</td>
-              <td class="col-thesis"><strong>Operating</strong> &bull; Mature destination with stable year-round domestic and West Coast US travel demand; attractive initial cap rate[span_6](start_span)[span_6](end_span).</td>
+              <td class="col-thesis"><strong>Operating</strong> &bull; Mature destination with stable year-round domestic and West Coast US travel demand; attractive initial cap rate.</td>
             </tr>
           </tbody>
         </table>
@@ -591,7 +592,7 @@
               <td class="col-keys text-center cell-bold">120</td>
               <td class="col-price text-center cell-bold">$66.0M</td>
               <td class="col-cap text-center cell-bold">5.80% / 7.80%</td>
-              <td class="col-thesis"><strong>Flexible</strong> &bull; Elite hillside location optimal for ultra-luxury boutique conversion or high-end branded residences program[span_7](start_span)[span_7](end_span).</td>
+              <td class="col-thesis"><strong>Flexible</strong> &bull; Elite hillside location optimal for ultra-luxury boutique conversion or high-end branded residences program.</td>
             </tr>
           </tbody>
         </table>
@@ -637,7 +638,7 @@
               <td class="col-keys text-center cell-bold">108</td>
               <td class="col-price text-center cell-bold">$28.0M</td>
               <td class="col-cap text-center cell-bold">5.40% / 7.20%</td>
-              <td class="col-thesis"><strong>Operating</strong> &bull; High-traffic growth avenue in Riviera Nayarit; optimal entry pricing for expansion into select-service hospitality[span_8](start_span)[span_8](end_span).</td>
+              <td class="col-thesis"><strong>Operating</strong> &bull; High-traffic growth avenue in Riviera Nayarit; optimal entry pricing for expansion into select-service hospitality.</td>
             </tr>
           </tbody>
         </table>
@@ -683,7 +684,7 @@
               <td class="col-keys text-center cell-bold">131</td>
               <td class="col-price text-center cell-bold">$20.97M</td>
               <td class="col-cap text-center cell-bold">6.80% / 8.40%</td>
-              <td class="col-thesis"><strong>Operating</strong> &bull; Strategic hub for oil &amp; energy corporate contracting; high-yield stabilized cash flow with institutional brand equity[span_9](start_span)[span_9](end_span).</td>
+              <td class="col-thesis"><strong>Operating</strong> &bull; Strategic hub for oil &amp; energy corporate contracting; high-yield stabilized cash flow with institutional brand equity.</td>
             </tr>
           </tbody>
         </table>
@@ -702,7 +703,7 @@
       <div class="section-ribbon">Metropolitan Business &amp; Full-Service Portfolios</div>
       <!-- Ref #9 -->
       <div class="hero-container-compact"><div class="hero-placeholder-box">[PHOTO PLACEHOLDER: CORPORATE TOWER &amp; BUSINESS DISTRICT - QUERÉTARO]</div></div>
-      <div class="executive-section" style="margin-bottom: 2mm;">
+      <div class="executive-section" style="margin-bottom: 3.5mm;">
         <div class="header-bar">
           <div class="title-group">
             <h2 class="asset-title">Asset Ref #9: Central Industrial Corridor Business Hotel</h2>
@@ -718,7 +719,7 @@
             <td class="col-keys text-center cell-bold">175</td>
             <td class="col-price text-center cell-bold">$19.76M</td>
             <td class="col-cap text-center cell-bold">6.90% / 8.60%</td>
-            <td class="col-thesis"><strong>Operating</strong> &bull; High industrial &amp; aerospace corporate demand; located in one of Mexico's fastest growing economic zones[span_10](start_span)[span_10](end_span).</td>
+            <td class="col-thesis"><strong>Operating</strong> &bull; High industrial &amp; aerospace corporate demand; located in one of Mexico's fastest growing economic zones.</td>
           </tr></tbody>
         </table>
       </div>
@@ -740,7 +741,7 @@
             <td class="col-keys text-center cell-bold">153</td>
             <td class="col-price text-center cell-bold">$18.23M</td>
             <td class="col-cap text-center cell-bold">6.70% / 8.30%</td>
-            <td class="col-thesis"><strong>Operating</strong> &bull; Top-tier address in affluent retail &amp; medical hub; excellent reputation and premium banquet/MICE revenues[span_11](start_span)[span_11](end_span).</td>
+            <td class="col-thesis"><strong>Operating</strong> &bull; Top-tier address in affluent retail &amp; medical hub; excellent reputation and premium banquet/MICE revenues.</td>
           </tr></tbody>
         </table>
       </div>
@@ -758,7 +759,7 @@
       <div class="section-ribbon">Industrial Corridor &amp; Manufacturing Hub Assets</div>
       <!-- Ref #11 -->
       <div class="hero-container-compact"><div class="hero-placeholder-box">[PHOTO PLACEHOLDER: COMMERCIAL BOULEVARD HOTEL EXTERIOR - LEÓN]</div></div>
-      <div class="executive-section" style="margin-bottom: 2mm;">
+      <div class="executive-section" style="margin-bottom: 3.5mm;">
         <div class="header-bar">
           <div class="title-group">
             <h2 class="asset-title">Asset Ref #11: Manufacturing Capital Select-Service Hotel</h2>
@@ -774,7 +775,7 @@
             <td class="col-keys text-center cell-bold">160</td>
             <td class="col-price text-center cell-bold">$10.84M</td>
             <td class="col-cap text-center cell-bold">7.00% / 8.80%</td>
-            <td class="col-thesis"><strong>Operating</strong> &bull; Close proximity to Poliforum León convention center and industrial corridors; consistent high weekday occupancy[span_12](start_span)[span_12](end_span).</td>
+            <td class="col-thesis"><strong>Operating</strong> &bull; Close proximity to Poliforum León convention center and industrial corridors; consistent high weekday occupancy.</td>
           </tr></tbody>
         </table>
       </div>
@@ -796,7 +797,7 @@
             <td class="col-keys text-center cell-bold">121</td>
             <td class="col-price text-center cell-bold">$10.64M</td>
             <td class="col-cap text-center cell-bold">7.20% / 9.00%</td>
-            <td class="col-thesis"><strong>Operating</strong> &bull; Dominant hospitality asset in Coahuila's industrial steel corridor; strong margins and corporate long-stay contracts[span_13](start_span)[span_13](end_span).</td>
+            <td class="col-thesis"><strong>Operating</strong> &bull; Dominant hospitality asset in Coahuila's industrial steel corridor; strong margins and corporate long-stay contracts.</td>
           </tr></tbody>
         </table>
       </div>
@@ -814,7 +815,7 @@
       <div class="section-ribbon">Greater Mexico City Corporate Corridor Assets</div>
       <!-- Ref #13 -->
       <div class="hero-container-compact"><div class="hero-placeholder-box">[PHOTO PLACEHOLDER: HIGHWAY ACCESS &amp; COMMERCIAL COMPLEX - PERIFÉRICO NORTE]</div></div>
-      <div class="executive-section" style="margin-bottom: 2mm;">
+      <div class="executive-section" style="margin-bottom: 3.5mm;">
         <div class="header-bar">
           <div class="title-group">
             <h2 class="asset-title">Asset Ref #13: Logistics &amp; North Metro Artery Business Hotel</h2>
@@ -830,7 +831,7 @@
             <td class="col-keys text-center cell-bold">127</td>
             <td class="col-price text-center cell-bold">$9.51M</td>
             <td class="col-cap text-center cell-bold">7.10% / 8.90%</td>
-            <td class="col-thesis"><strong>Operating</strong> &bull; Serves northern logistics and distribution parks with high occupancy from automotive and distribution logistics[span_14](start_span)[span_14](end_span).</td>
+            <td class="col-thesis"><strong>Operating</strong> &bull; Serves northern logistics and distribution parks with high occupancy from automotive and distribution logistics.</td>
           </tr></tbody>
         </table>
       </div>
@@ -852,7 +853,7 @@
             <td class="col-keys text-center cell-bold">131</td>
             <td class="col-price text-center cell-bold">$9.03M</td>
             <td class="col-cap text-center cell-bold">7.30% / 9.10%</td>
-            <td class="col-thesis"><strong>Operating</strong> &bull; Established presence in premier manufacturing zone; high repeat corporate occupancy with stable cash yields[span_15](start_span)[span_15](end_span).</td>
+            <td class="col-thesis"><strong>Operating</strong> &bull; Established presence in premier manufacturing zone; high repeat corporate occupancy with stable cash yields.</td>
           </tr></tbody>
         </table>
       </div>
@@ -870,7 +871,7 @@
       <div class="section-ribbon">Strategic Select-Service Business Network</div>
       <!-- Ref #15 -->
       <div class="hero-container-compact"><div class="hero-placeholder-box">[PHOTO PLACEHOLDER: CONTEMPORARY SELECT-SERVICE EXTERIOR - QUERÉTARO]</div></div>
-      <div class="executive-section" style="margin-bottom: 2mm;">
+      <div class="executive-section" style="margin-bottom: 3.5mm;">
         <div class="header-bar">
           <div class="title-group">
             <h2 class="asset-title">Asset Ref #15: Lean Select-Service Corporate Hotel</h2>
@@ -886,7 +887,7 @@
             <td class="col-keys text-center cell-bold">126</td>
             <td class="col-price text-center cell-bold">$8.72M</td>
             <td class="col-cap text-center cell-bold">7.40% / 9.20%</td>
-            <td class="col-thesis"><strong>Operating</strong> &bull; Synergistic corporate hub location; ultra-lean operating model generating exceptional net operating margins[span_16](start_span)[span_16](end_span).</td>
+            <td class="col-thesis"><strong>Operating</strong> &bull; Synergistic corporate hub location; ultra-lean operating model generating exceptional net operating margins.</td>
           </tr></tbody>
         </table>
       </div>
@@ -908,7 +909,7 @@
             <td class="col-keys text-center cell-bold">123</td>
             <td class="col-price text-center cell-bold">$8.26M</td>
             <td class="col-cap text-center cell-bold">7.20% / 9.00%</td>
-            <td class="col-thesis"><strong>Operating</strong> &bull; Directly serves Volkswagen and supplier ecosystem; sustained international corporate traveler base[span_17](start_span)[span_17](end_span).</td>
+            <td class="col-thesis"><strong>Operating</strong> &bull; Directly serves Volkswagen and supplier ecosystem; sustained international corporate traveler base.</td>
           </tr></tbody>
         </table>
       </div>
@@ -926,7 +927,7 @@
       <div class="section-ribbon">Border &amp; Metropolitan Select-Service Assets</div>
       <!-- Ref #17 -->
       <div class="hero-container-compact"><div class="hero-placeholder-box">[PHOTO PLACEHOLDER: NAUCALPAN METRO ARTERY &amp; FACADE]</div></div>
-      <div class="executive-section" style="margin-bottom: 2mm;">
+      <div class="executive-section" style="margin-bottom: 3.5mm;">
         <div class="header-bar">
           <div class="title-group">
             <h2 class="asset-title">Asset Ref #17: Central Arterial Corporate Hotel</h2>
@@ -942,7 +943,7 @@
             <td class="col-keys text-center cell-bold">119</td>
             <td class="col-price text-center cell-bold">$8.15M</td>
             <td class="col-cap text-center cell-bold">7.30% / 9.10%</td>
-            <td class="col-thesis"><strong>Operating</strong> &bull; Primary arterial connection between CDMX and industrial zones; high corporate contract retention[span_18](start_span)[span_18](end_span).</td>
+            <td class="col-thesis"><strong>Operating</strong> &bull; Primary arterial connection between CDMX and industrial zones; high corporate contract retention.</td>
           </tr></tbody>
         </table>
       </div>
@@ -964,7 +965,7 @@
             <td class="col-keys text-center cell-bold">120</td>
             <td class="col-price text-center cell-bold">$8.10M</td>
             <td class="col-cap text-center cell-bold">7.50% / 9.30%</td>
-            <td class="col-thesis"><strong>Operating</strong> &bull; Positioned at Latin America's #1 land freight port of entry, steady corporate trade demand with minimal cyclicality[span_19](start_span)[span_19](end_span).</td>
+            <td class="col-thesis"><strong>Operating</strong> &bull; Positioned at Latin America's #1 land freight port of entry, steady corporate trade demand with minimal cyclicality.</td>
           </tr></tbody>
         </table>
       </div>
@@ -982,7 +983,7 @@
       <div class="section-ribbon">Nearshoring &amp; Northern Hub Portfolios</div>
       <!-- Ref #19 -->
       <div class="hero-container-compact"><div class="hero-placeholder-box">[PHOTO PLACEHOLDER: AEROSPACE &amp; AUTO CORRIDOR EXTERIOR - SALTILLO]</div></div>
-      <div class="executive-section" style="margin-bottom: 2mm;">
+      <div class="executive-section" style="margin-bottom: 3.5mm;">
         <div class="header-bar">
           <div class="title-group">
             <h2 class="asset-title">Asset Ref #19: Nearshoring EV Cluster Select-Service Hotel</h2>
@@ -998,7 +999,7 @@
             <td class="col-keys text-center cell-bold">126</td>
             <td class="col-price text-center cell-bold">$7.82M</td>
             <td class="col-cap text-center cell-bold">7.50% / 9.40%</td>
-            <td class="col-thesis"><strong>Operating</strong> &bull; Key location on Saltillo-Monterrey EV cluster; robust business traveler traffic driven by nearshoring expansion[span_20](start_span)[span_20](end_span).</td>
+            <td class="col-thesis"><strong>Operating</strong> &bull; Key location on Saltillo-Monterrey EV cluster; robust business traveler traffic driven by nearshoring expansion.</td>
           </tr></tbody>
         </table>
       </div>
@@ -1020,7 +1021,7 @@
             <td class="col-keys text-center cell-bold">152</td>
             <td class="col-price text-center cell-bold">$7.70M</td>
             <td class="col-cap text-center cell-bold">7.30% / 9.10%</td>
-            <td class="col-thesis"><strong>Operating</strong> &bull; Strong positioning in major aerospace and advanced electronics manufacturing hub; stable domestic corporate yields[span_21](start_span)[span_21](end_span).</td>
+            <td class="col-thesis"><strong>Operating</strong> &bull; Strong positioning in major aerospace and advanced electronics manufacturing hub; stable domestic corporate yields.</td>
           </tr></tbody>
         </table>
       </div>
@@ -1038,7 +1039,7 @@
       <div class="section-ribbon">Energy, Capital &amp; Regional Growth Hubs</div>
       <!-- Ref #21 -->
       <div class="hero-container-compact"><div class="hero-placeholder-box">[PHOTO PLACEHOLDER: TEPIC COMMERCIAL CENTER &amp; HOTEL FRONT - PLAZA FORUM]</div></div>
-      <div class="executive-section" style="margin-bottom: 2mm;">
+      <div class="executive-section" style="margin-bottom: 3.5mm;">
         <div class="header-bar">
           <div class="title-group">
             <h2 class="asset-title">Asset Ref #21: Capital Gateway Commercial Mall Hotel</h2>
@@ -1054,7 +1055,7 @@
             <td class="col-keys text-center cell-bold">127</td>
             <td class="col-price text-center cell-bold">$7.59M</td>
             <td class="col-cap text-center cell-bold">7.40% / 9.20%</td>
-            <td class="col-thesis"><strong>Operating</strong> &bull; Top retail location at Plaza Forum; captures government, agribusiness, and tourism gateway traffic into Nayarit[span_22](start_span)[span_22](end_span).</td>
+            <td class="col-thesis"><strong>Operating</strong> &bull; Top retail location at Plaza Forum; captures government, agribusiness, and tourism gateway traffic into Nayarit.</td>
           </tr></tbody>
         </table>
       </div>
@@ -1076,7 +1077,7 @@
             <td class="col-keys text-center cell-bold">134</td>
             <td class="col-price text-center cell-bold">$7.38M</td>
             <td class="col-cap text-center cell-bold">7.60% / 9.50%</td>
-            <td class="col-thesis"><strong>Operating</strong> &bull; Strategic location in energy capital; global loyalty program affinity and corporate energy contractor accounts[span_23](start_span)[span_23](end_span).</td>
+            <td class="col-thesis"><strong>Operating</strong> &bull; Strategic location in energy capital; global loyalty program affinity and corporate energy contractor accounts.</td>
           </tr></tbody>
         </table>
       </div>
@@ -1094,7 +1095,7 @@
       <div class="section-ribbon">Industrial Corridor &amp; Regional Operations</div>
       <!-- Ref #23 -->
       <div class="hero-container-compact"><div class="hero-placeholder-box">[PHOTO PLACEHOLDER: CONTEMPORARY HOTEL FACADE &amp; POOL - LEÓN BOULEVARD]</div></div>
-      <div class="executive-section" style="margin-bottom: 2mm;">
+      <div class="executive-section" style="margin-bottom: 3.5mm;">
         <div class="header-bar">
           <div class="title-group">
             <h2 class="asset-title">Asset Ref #23: Prime Commercial Artery Hotel Asset</h2>
@@ -1110,7 +1111,7 @@
             <td class="col-keys text-center cell-bold">126</td>
             <td class="col-price text-center cell-bold">$6.89M</td>
             <td class="col-cap text-center cell-bold">7.70% / 9.60%</td>
-            <td class="col-thesis"><strong>Flexible</strong> &bull; High flexibility for brand conversion or independent boutique repositioning along León's primary retail artery[span_24](start_span)[span_24](end_span).</td>
+            <td class="col-thesis"><strong>Flexible</strong> &bull; High flexibility for brand conversion or independent boutique repositioning along León's primary retail artery.</td>
           </tr></tbody>
         </table>
       </div>
@@ -1132,7 +1133,7 @@
             <td class="col-keys text-center cell-bold">126</td>
             <td class="col-price text-center cell-bold">$5.83M</td>
             <td class="col-cap text-center cell-bold">7.80% / 9.80%</td>
-            <td class="col-thesis"><strong>Operating</strong> &bull; Optimal lean cost structure catering directly to technicians and supply chain executives in the Puebla auto hub[span_25](start_span)[span_25](end_span).</td>
+            <td class="col-thesis"><strong>Operating</strong> &bull; Optimal lean cost structure catering directly to technicians and supply chain executives in the Puebla auto hub.</td>
           </tr></tbody>
         </table>
       </div>
@@ -1150,7 +1151,7 @@
       <div class="section-ribbon">Regional Centers &amp; Airport Corridor Assets</div>
       <!-- Ref #25 -->
       <div class="hero-container-compact"><div class="hero-placeholder-box">[PHOTO PLACEHOLDER: REGIONAL COMMERCIAL HOTEL &amp; COURTYARD - CD. OBREGÓN]</div></div>
-      <div class="executive-section" style="margin-bottom: 2mm;">
+      <div class="executive-section" style="margin-bottom: 3.5mm;">
         <div class="header-bar">
           <div class="title-group">
             <h2 class="asset-title">Asset Ref #25: Regional Agribusiness Hub Hotel</h2>
@@ -1166,7 +1167,7 @@
             <td class="col-keys text-center cell-bold">116</td>
             <td class="col-price text-center cell-bold">$5.30M</td>
             <td class="col-cap text-center cell-bold">8.00% / 10.10%</td>
-            <td class="col-thesis"><strong>Flexible</strong> &bull; Attractive valuation multiple in primary Sonoran agricultural and commercial trading hub; strong cash yield[span_26](start_span)[span_26](end_span).</td>
+            <td class="col-thesis"><strong>Flexible</strong> &bull; Attractive valuation multiple in primary Sonoran agricultural and commercial trading hub; strong cash yield.</td>
           </tr></tbody>
         </table>
       </div>
@@ -1188,7 +1189,7 @@
             <td class="col-keys text-center cell-bold">126</td>
             <td class="col-price text-center cell-bold">$4.55M</td>
             <td class="col-cap text-center cell-bold">7.90% / 9.90%</td>
-            <td class="col-thesis"><strong>Operating</strong> &bull; Direct airport connectivity and corporate shuttle service serving Toluca's heavy manufacturing cluster[span_27](start_span)[span_27](end_span).</td>
+            <td class="col-thesis"><strong>Operating</strong> &bull; Direct airport connectivity and corporate shuttle service serving Toluca's heavy manufacturing cluster.</td>
           </tr></tbody>
         </table>
       </div>
@@ -1205,8 +1206,8 @@
     <div>
       <div class="section-ribbon">Entry Valuation Asset &amp; Master Portfolio Summary</div>
       <!-- Ref #27 -->
-      <div class="hero-container-compact" style="height: 18mm;"><div class="hero-placeholder-box">[PHOTO PLACEHOLDER: SELECT-SERVICE COMPACT HOTEL - MONCLOVA PAPE]</div></div>
-      <div class="executive-section" style="margin-top: 1mm;">
+      <div class="hero-container-compact" style="height: 20mm;"><div class="hero-placeholder-box">[PHOTO PLACEHOLDER: SELECT-SERVICE COMPACT HOTEL - MONCLOVA PAPE]</div></div>
+      <div class="executive-section" style="margin-top: 1.5mm;">
         <div class="header-bar">
           <div class="title-group">
             <h2 class="asset-title">Asset Ref #27: Industrial Heavy Manufacturing Select Service</h2>
@@ -1222,7 +1223,7 @@
             <td class="col-keys text-center cell-bold">120</td>
             <td class="col-price text-center cell-bold">$3.40M</td>
             <td class="col-cap text-center cell-bold">8.20% / 10.40%</td>
-            <td class="col-thesis"><strong>Operating</strong> &bull; Highly attractive entry pricing ($28.3k/key) in established manufacturing corridor; high cash distribution yield[span_28](start_span)[span_28](end_span).</td>
+            <td class="col-thesis"><strong>Operating</strong> &bull; Highly attractive entry pricing ($28.3k/key) in established manufacturing corridor; high cash distribution yield.</td>
           </tr></tbody>
         </table>
       </div>
@@ -1281,7 +1282,7 @@
       </div>
 
       <p class="legal-notice">
-        <strong>Transaction &amp; Acquisition Protocol:</strong> All properties are subject to formal RFI sign-off. Detailed CIM dossiers, historical P&amp;L audits, and flag/operator transition frameworks are made available under executed Non-Disclosure Agreement (NDA). Direct repository access: Google Drive Central Folder[span_29](start_span)[span_29](end_span).
+        <strong>Transaction &amp; Acquisition Protocol:</strong> All properties are subject to formal RFI sign-off. Detailed CIM dossiers, historical P&amp;L audits, and flag/operator transition frameworks are made available under executed Non-Disclosure Agreement (NDA). Direct repository access: Google Drive Central Folder.
       </p>
     </div>
     <footer class="page-footer">
