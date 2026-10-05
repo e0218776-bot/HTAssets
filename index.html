@@ -1,411 +1,1295 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
+<html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Selling Playa | Royal Coast Properties</title>
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>Master Portfolio 2026 - Royal Coast Properties</title>
   <style>
-    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    @page {
+      size: 297mm 210mm;
+      margin: 0;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    html, body {
+      background-color: #CBD5E1;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: #1E293B;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page-sheet {
+      width: 297mm;
+      height: 210mm;
+      position: relative;
+      padding: 6mm 10mm 4mm 10mm;
+      background-color: #FFFFFF;
+      margin: 0 auto 10mm auto;
+      page-break-after: always;
+      break-after: page;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    @media print {
+      body { background-color: transparent; }
+      .page-sheet { margin: 0; }
+    }
+
+    /* =========================================================
+       ENCABEZADO MAESTRO (PÁGINA 1) - TIPOGRAFÍA +2
+       ========================================================= */
+    .master-header-container {
+      width: 277mm;
+      margin-bottom: 1.5mm;
+    }
+
+    .master-header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 1.2px solid #CBD5E1;
+      padding-bottom: 1.2mm;
+      margin-bottom: 1.5mm;
+    }
+
+    .brand-col-left {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-title {
+      font-size: 16.5px; /* +2 */
+      font-weight: 800;
+      letter-spacing: 1.2px;
+      color: #1E293B;
+      line-height: 1.1;
+      text-transform: uppercase;
+    }
+
+    .brand-subtitle {
+      font-size: 12px; /* +2 */
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      color: #0284C7;
+      margin-top: 0.5mm;
+      text-transform: uppercase;
+    }
+
+    .brand-col-right {
+      text-align: right;
+      font-size: 10.5px; /* +2 */
+      color: #475569;
+      line-height: 1.3;
+    }
+
+    .brand-col-right strong {
+      color: #1E293B;
+    }
+
+    .overview-callout {
+      background-color: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      border-left: 3.5px solid #0284C7;
+      padding: 1.2mm 2.5mm;
+      border-radius: 2px;
+      margin-bottom: 1.5mm;
+    }
+
+    .overview-callout p {
+      font-size: 9.6px; /* +2 */
+      line-height: 1.3;
+      color: #334155;
+    }
+
+    .overview-callout strong {
+      color: #0F172A;
+    }
+
+    /* Section Ribbon (Páginas 2 a 14) */
+    .section-ribbon {
+      background-color: #0F2C59;
+      color: #FFFFFF;
+      padding: 1.2mm 3mm;
+      font-size: 9.5px; /* +2 */
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      border-radius: 2px;
+      margin-bottom: 1.5mm;
+    }
+
+    /* Contenedores de Imagen */
+    .hero-container-page1 {
+      width: 277mm;
+      height: 107mm;
+      overflow: hidden;
+      border-radius: 3px;
+      background-color: #0F172A;
+    }
+
+    .hero-container-standard {
+      width: 277mm;
+      height: 120mm;
+      overflow: hidden;
+      border-radius: 3px;
+      background-color: #0F172A;
+    }
+
+    .hero-container-compact {
+      width: 277mm;
+      height: 25mm;
+      overflow: hidden;
+      border-radius: 3px;
+      background-color: #0F172A;
+    }
+
+    .hero-placeholder-box {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
+      color: #94A3B8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px; /* +2 */
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      border: 1px dashed #475569;
+    }
+
+    .hero-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Ficha y Tablas */
+    .executive-section {
+      width: 277mm;
+      margin-top: 1.5mm;
+    }
+
+    .header-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      border-bottom: 1.5px solid #0F2C59;
+      padding-bottom: 1.2mm;
+      margin-bottom: 1.5mm;
+    }
+
+    .title-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4mm;
+    }
+
+    .asset-title {
+      font-size: 15px; /* +2 */
+      font-weight: 700;
+      color: #0F172A;
+      line-height: 1.1;
+    }
+
+    .asset-subtitle {
+      font-size: 10.5px; /* +2 */
+      font-weight: 600;
+      color: #64748B;
+      letter-spacing: 0.3px;
+      text-transform: uppercase;
+    }
+
+    .price-value {
+      font-size: 19.5px; /* +2 */
+      font-weight: 800;
+      color: #0F2C59;
+      line-height: 1;
+    }
+
+    .metrics-table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+    }
+
+    .metrics-table th, .metrics-table td {
+      border: 1px solid #E2E8F0;
+      padding: 1.2mm 1.6mm;
+      vertical-align: top;
+      text-align: left;
+    }
+
+    .metrics-table th {
+      background-color: #F8FAFC;
+      color: #475569;
+      font-size: 9.2px; /* +2 */
+      font-weight: 700;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+      border-bottom: 1.2px solid #CBD5E1;
+    }
+
+    .metrics-table td {
+      font-size: 10px; /* +2 */
+      line-height: 1.2;
+      color: #1E293B;
+    }
+
+    .cell-bold { font-weight: 700; color: #0F2C59; }
+    .cell-muted { color: #64748B; font-size: 9.5px; /* +2 */ }
+    .col-concept { width: 22%; }
+    .col-market  { width: 17%; }
+    .col-keys    { width: 8%; text-align: center; }
+    .col-price   { width: 11%; text-align: center; }
+    .col-cap     { width: 11%; text-align: center; }
+    .col-thesis  { width: 31%; }
+    .text-center { text-align: center !important; }
+
+    /* Footer Institucional */
+    .page-footer {
+      width: 277mm;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 9.5px; /* +2 */
+      font-weight: 600;
+      color: #94A3B8;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      border-top: 1px solid #F1F5F9;
+      padding-top: 1mm;
+    }
+
+    /* Página 14 Resumen */
+    .summary-box {
+      margin-top: 1.5mm;
+      border: 1.5px solid #0F2C59;
+      border-radius: 3px;
+      overflow: hidden;
+    }
+    .summary-header {
+      background-color: #0F2C59;
+      color: #FFFFFF;
+      font-size: 10px; /* +2 */
+      font-weight: 700;
+      padding: 1mm 2.2mm;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+    }
+    .summary-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 9.5px; /* +2 */
+    }
+    .summary-table th, .summary-table td {
+      padding: 0.8mm 1.8mm;
+      border: 1px solid #E2E8F0;
+    }
+    .summary-table th {
+      background-color: #F8FAFC;
+      color: #334155;
+      font-weight: 700;
+    }
+    .legal-notice {
+      font-size: 8.8px; /* +2 */
+      color: #64748B;
+      line-height: 1.2;
+      margin-top: 1.2mm;
+      font-style: italic;
+    }
   </style>
 </head>
-<body class="bg-slate-950 text-slate-100 min-h-screen selection:bg-teal-500 selection:text-slate-950">
+<body>
 
-  <!-- NAVBAR CON DROPDOWN FLUIDO -->
-  <header class="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800/80">
-    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-      <a href="#" class="flex flex-col">
-        <span class="text-xl md:text-2xl font-black tracking-wider text-white">SELLING<span class="text-teal-400 font-light">PLAYA</span></span>
-        <span class="text-[10px] tracking-widest text-slate-400 uppercase font-semibold">Royal Coast Properties</span>
-      </a>
-
-      <nav class="hidden md:flex items-center space-x-8">
-        <a href="#activos" class="text-sm font-medium hover:text-teal-400 transition">Portafolio</a>
-        
-        <!-- Dropdown al pasar el ratón -->
-        <div class="relative group">
-          <button class="flex items-center gap-1.5 text-sm font-medium py-2 hover:text-teal-400 transition">
-            <span>Activos</span>
-            <svg class="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-          </button>
-          <div class="absolute left-0 top-full pt-2 opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-300 ease-out">
-            <div class="bg-slate-900 border border-slate-800 rounded-2xl shadow-2xl p-2.5 w-60 space-y-1">
-              <a href="#contacto" onclick="seleccionarActivo('Hoteles')" class="block px-3 py-2 text-sm rounded-xl hover:bg-slate-800 hover:text-teal-300 transition">Hoteles</a>
-              <a href="#contacto" onclick="seleccionarActivo('Centros Comerciales')" class="block px-3 py-2 text-sm rounded-xl hover:bg-slate-800 hover:text-teal-300 transition">Centros Comerciales</a>
-              <a href="#contacto" onclick="seleccionarActivo('Residenciales')" class="block px-3 py-2 text-sm rounded-xl hover:bg-slate-800 hover:text-teal-300 transition">Residenciales</a>
-              <a href="#contacto" onclick="seleccionarActivo('Terrenos')" class="block px-3 py-2 text-sm rounded-xl hover:bg-slate-800 hover:text-teal-300 transition">Terrenos / Macrolotes</a>
-              <a href="#contacto" onclick="seleccionarActivo('Casas')" class="block px-3 py-2 text-sm rounded-xl hover:bg-slate-800 hover:text-teal-300 transition">Casas & Villas</a>
-              <a href="#contacto" onclick="seleccionarActivo('Apartamentos')" class="block px-3 py-2 text-sm rounded-xl hover:bg-slate-800 hover:text-teal-300 transition">Apartamentos</a>
-            </div>
+  <!-- ==================== PÁGINA 1 ==================== -->
+  <div class="page-sheet">
+    <div>
+      <div class="master-header-container">
+        <div class="master-header-top">
+          <div class="brand-col-left">
+            <h1 class="brand-title">ROYAL COAST PROPERTIES</h1>
+            <span class="brand-subtitle">EXECUTIVE HOTEL &amp; RESORT MASTER PORTFOLIO 2026</span>
+          </div>
+          <div class="brand-col-right">
+            <div><strong>Coverage:</strong> Complete 27-Asset Inventory</div>
+            <div><strong>Order:</strong> Descending Asking Price (USD)</div>
           </div>
         </div>
-
-        <a href="#contacto" class="text-sm font-medium hover:text-teal-400 transition">Contacto Confidencial</a>
-      </nav>
-
-      <a href="#contacto" class="bg-teal-500 hover:bg-teal-400 text-slate-950 font-bold text-xs uppercase tracking-wider px-5 py-2.5 rounded-full transition duration-300 shadow-sm">
-        Contactar Broker
-      </a>
-    </div>
-  </header>
-
-  <!-- HERO Y FORMULARIO PRINCIPAL -->
-  <section id="contacto" class="py-14 md:py-20 px-6 max-w-7xl mx-auto">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-      
-      <div class="lg:col-span-6 space-y-6">
-        <span class="inline-block text-[11px] uppercase font-bold tracking-widest text-teal-400 bg-teal-950/60 border border-teal-800/50 px-3.5 py-1.5 rounded-full">
-          Descubrimiento Privado de Oportunidades
-        </span>
-        <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">
-          Adquisición de Activos Inmobiliarios en Riviera Maya.
-        </h1>
-        <p class="text-slate-400 text-base leading-relaxed">
-          Para proteger la confidencialidad comercial de cada activo, no manejamos datos financieros ni fichas públicas en el sitio. Registra tus datos para asignarte un broker especializado y realizar la llamada de discovery.
-        </p>
-        <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800/80 text-xs text-slate-400 flex items-center gap-3">
-          <span class="h-2.5 w-2.5 rounded-full bg-emerald-400 animate-pulse shrink-0"></span>
-          <span>Intermediación confidencial y profesional.</span>
+        <div class="overview-callout">
+          <p><strong>Master Inventory Overview:</strong> Consolidated underwriting schedule of all 27 hospitality assets across Caribbean, Pacific, Baja Peninsula, and key Mexican metropolitan centers. Sequenced strictly in descending order of asking price ($600.0M to $3.4M USD)[span_1](start_span)[span_1](end_span).</p>
         </div>
       </div>
 
-      <!-- TARJETA DEL FORMULARIO -->
-      <div class="lg:col-span-6">
-        <div id="contactCard" class="bg-slate-900/80 border border-slate-800 rounded-3xl p-6 sm:p-8 backdrop-blur-xl shadow-2xl transition-all duration-300">
-          
-          <form id="leadForm" onsubmit="enviarFormulario(event)" class="space-y-4">
-            
-            <!-- Nombre -->
-            <div>
-              <label class="block text-xs font-semibold uppercase text-slate-400 mb-1.5">Nombre Completo</label>
-              <input type="text" id="nombre" required placeholder="Ej. Carlos Mendoza" 
-                class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm focus:border-teal-400 focus:ring-1 focus:ring-teal-400 outline-none transition text-slate-100 placeholder-slate-600">
-            </div>
-
-            <!-- Email -->
-            <div>
-              <label class="block text-xs font-semibold uppercase text-slate-400 mb-1.5">Correo Electrónico</label>
-              <input type="email" id="email" required placeholder="tu@correo.com" 
-                class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm focus:border-teal-400 focus:ring-1 focus:ring-teal-400 outline-none transition text-slate-100 placeholder-slate-600">
-            </div>
-
-            <!-- WhatsApp: Combobox exhaustivo de ladas + caja de número local -->
-            <div>
-              <label class="block text-xs font-semibold uppercase text-slate-400 mb-1.5">WhatsApp / Teléfono</label>
-              <div class="flex gap-2">
-                <select id="codigoPais" required class="w-2/5 sm:w-1/3 bg-slate-950 border border-slate-800 rounded-xl px-2.5 py-3 text-xs focus:border-teal-400 focus:ring-1 focus:ring-teal-400 outline-none transition text-slate-200 cursor-pointer">
-                  
-                  <optgroup label="Más Frecuentes">
-                    <option value="+52" selected>🇲🇽 +52 México</option>
-                    <option value="+1">🇺🇸/🇨🇦 +1 USA / Canadá</option>
-                    <option value="+34">🇪🇸 +34 España</option>
-                    <option value="+57">🇨🇴 +57 Colombia</option>
-                    <option value="+54">🇦🇷 +54 Argentina</option>
-                    <option value="+56">🇨🇱 +56 Chile</option>
-                  </optgroup>
-
-                  <optgroup label="Latinoamérica & Caribe">
-                    <option value="+501">🇧🇿 +501 Belice</option>
-                    <option value="+591">🇧🇴 +591 Bolivia</option>
-                    <option value="+55">🇧🇷 +55 Brasil</option>
-                    <option value="+506">🇨🇷 +506 Costa Rica</option>
-                    <option value="+53">🇨🇺 +53 Cuba</option>
-                    <option value="+593">🇪🇨 +593 Ecuador</option>
-                    <option value="+503">🇸🇻 +503 El Salvador</option>
-                    <option value="+502">🇬🇹 +502 Guatemala</option>
-                    <option value="+504">🇭🇳 +504 Honduras</option>
-                    <option value="+505">🇳🇮 +505 Nicaragua</option>
-                    <option value="+507">🇵🇦 +507 Panamá</option>
-                    <option value="+595">🇵🇾 +595 Paraguay</option>
-                    <option value="+51">🇵🇪 +51 Perú</option>
-                    <option value="+1787">🇵🇷 +1-787 Puerto Rico</option>
-                    <option value="+1809">🇩🇴 +1-809 Rep. Dominicana</option>
-                    <option value="+598">🇺🇾 +598 Uruguay</option>
-                    <option value="+58">🇻🇪 +58 Venezuela</option>
-                  </optgroup>
-
-                  <optgroup label="Europa">
-                    <option value="+49">🇩🇪 +49 Alemania</option>
-                    <option value="+43">🇦🇹 +43 Austria</option>
-                    <option value="+32">🇧🇪 +32 Bélgica</option>
-                    <option value="+359">🇧🇬 +359 Bulgaria</option>
-                    <option value="+357">🇨🇾 +357 Chipre</option>
-                    <option value="+385">🇭🇷 +385 Croacia</option>
-                    <option value="+45">🇩🇰 +45 Dinamarca</option>
-                    <option value="+421">🇸🇰 +421 Eslovaquia</option>
-                    <option value="+386">🇸🇮 +386 Eslovenia</option>
-                    <option value="+372">🇪🇪 +372 Estonia</option>
-                    <option value="+358">🇫🇮 +358 Finlandia</option>
-                    <option value="+33">🇫🇷 +33 Francia</option>
-                    <option value="+30">🇬🇷 +30 Grecia</option>
-                    <option value="+36">🇭🇺 +36 Hungría</option>
-                    <option value="+353">🇮🇪 +353 Irlanda</option>
-                    <option value="+354">🇮🇸 +354 Islandia</option>
-                    <option value="+39">🇮🇹 +39 Italia</option>
-                    <option value="+371">🇱🇻 +371 Letonia</option>
-                    <option value="+370">🇱🇹 +370 Lituania</option>
-                    <option value="+352">🇱🇺 +352 Luxemburgo</option>
-                    <option value="+356">🇲🇹 +356 Malta</option>
-                    <option value="+47">🇳🇴 +47 Noruega</option>
-                    <option value="+31">🇳🇱 +31 Países Bajos</option>
-                    <option value="+48">🇵🇱 +48 Polonia</option>
-                    <option value="+351">🇵🇹 +351 Portugal</option>
-                    <option value="+44">🇬🇧 +44 Reino Unido</option>
-                    <option value="+420">🇨🇿 +420 Rep. Checa</option>
-                    <option value="+40">🇷🇴 +40 Rumania</option>
-                    <option value="+7">🇷🇺 +7 Rusia</option>
-                    <option value="+46">🇸🇪 +46 Suecia</option>
-                    <option value="+41">🇨🇭 +41 Suiza</option>
-                    <option value="+90">🇹🇷 +90 Turquía</option>
-                    <option value="+380">🇺🇦 +380 Ucrania</option>
-                  </optgroup>
-
-                  <optgroup label="Medio Oriente & Asia">
-                    <option value="+966">🇸🇦 +966 Arabia Saudita</option>
-                    <option value="+974">🇶🇦 +974 Catar</option>
-                    <option value="+86">🇨🇳 +86 China</option>
-                    <option value="+82">🇰🇷 +82 Corea del Sur</option>
-                    <option value="+971">🇦🇪 +971 Emiratos Árabes</option>
-                    <option value="+63">🇵🇭 +63 Filipinas</option>
-                    <option value="+852">🇭🇰 +852 Hong Kong</option>
-                    <option value="+91">🇮🇳 +91 India</option>
-                    <option value="+62">🇮🇩 +62 Indonesia</option>
-                    <option value="+972">🇮🇱 +972 Israel</option>
-                    <option value="+81">🇯🇵 +81 Japón</option>
-                    <option value="+60">🇲🇾 +60 Malasia</option>
-                    <option value="+65">🇸🇬 +65 Singapur</option>
-                    <option value="+66">🇹🇭 +66 Tailandia</option>
-                    <option value="+886">🇹🇼 +886 Taiwán</option>
-                    <option value="+84">🇻🇳 +84 Vietnam</option>
-                  </optgroup>
-
-                  <optgroup label="Oceanía & África">
-                    <option value="+61">🇦🇺 +61 Australia</option>
-                    <option value="+64">🇳🇿 +64 Nueva Zelanda</option>
-                    <option value="+20">🇪🇬 +20 Egipto</option>
-                    <option value="+212">🇲🇦 +212 Marruecos</option>
-                    <option value="+27">🇿🇦 +27 Sudáfrica</option>
-                  </optgroup>
-                </select>
-
-                <input type="tel" id="numeroTelefono" required placeholder="984 123 4567" 
-                  class="w-3/5 sm:w-2/3 bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm focus:border-teal-400 focus:ring-1 focus:ring-teal-400 outline-none transition text-slate-100 placeholder-slate-600">
-              </div>
-            </div>
-
-            <!-- Activo de Interés -->
-            <div>
-              <label class="block text-xs font-semibold uppercase text-slate-400 mb-1.5">Activo de Interés</label>
-              <select id="tipoActivo" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm focus:border-teal-400 focus:ring-1 focus:ring-teal-400 outline-none transition text-slate-200 cursor-pointer">
-                <option value="" disabled selected>Selecciona una categoría</option>
-                <option value="Hoteles">Hoteles</option>
-                <option value="Centros Comerciales">Centros Comerciales</option>
-                <option value="Residenciales">Residenciales</option>
-                <option value="Terrenos">Terrenos / Macrolotes</option>
-                <option value="Casas">Casas & Villas</option>
-                <option value="Apartamentos">Apartamentos</option>
-              </select>
-            </div>
-
-            <button type="submit" id="btnSubmit" 
-              class="w-full mt-2 bg-teal-500 hover:bg-teal-400 text-slate-950 font-bold text-sm uppercase tracking-wider py-3.5 rounded-xl transition duration-300 shadow-lg shadow-teal-500/20 active:scale-[0.99]">
-              Solicitar Registro y Ficha Confidencial
-            </button>
-          </form>
-
-          <!-- ESTADO DE ÉXITO CON BOTÓN WA.ME DIRECTO -->
-          <div id="successState" class="hidden text-center space-y-6 py-6">
-            <div class="w-14 h-14 bg-teal-500/10 border border-teal-500/30 text-teal-400 rounded-full flex items-center justify-center mx-auto text-2xl font-bold">
-              ✓
-            </div>
-            <div class="space-y-2">
-              <h3 class="text-xl font-bold text-white">Solicitud Recibida</h3>
-              <p class="text-xs sm:text-sm text-slate-400 max-w-sm mx-auto">
-                Tus datos quedaron registrados en nuestro sistema. Para acelerar tu proceso, presiona el botón para iniciar la conversación en WhatsApp con el broker:
-              </p>
-            </div>
-            
-            <a id="whatsappBtn" href="#" target="_blank" 
-              class="inline-flex items-center justify-center gap-3 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold py-3.5 px-6 rounded-xl transition duration-300 shadow-lg shadow-emerald-600/30 active:scale-[0.99]">
-              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
-              <span>Continuar en WhatsApp con el Broker</span>
-            </a>
-          </div>
-
-        </div>
+      <div class="hero-container-page1">
+        <img src="src/1.gpt-image-2.5-sunburst_a_Actúa_como_un_diseña (1).png" alt="Asset Ref #1" class="hero-image">
       </div>
 
+      <div class="executive-section">
+        <div class="header-bar">
+          <div class="title-group">
+            <h2 class="asset-title">Asset Ref #1: Luxury Beachfront Resort &amp; Spa (Five Diamond)</h2>
+            <span class="asset-subtitle">Portfolio Code: RCP-MX-600M &nbsp;|&nbsp; Confirmatory Due Diligence</span>
+          </div>
+          <span class="price-value">$600.0M USD</span>
+        </div>
+        <table class="metrics-table">
+          <thead>
+            <tr>
+              <th class="col-concept">Concept / Classification</th>
+              <th class="col-market">Market / Prime Corridor</th>
+              <th class="col-keys text-center">Keys</th>
+              <th class="col-price text-center">Asking Price</th>
+              <th class="col-cap text-center">Cap Rate</th>
+              <th class="col-thesis">Status / Investment Thesis</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="col-concept"><strong>Five-Diamond Oceanfront Resort</strong><br><span class="cell-muted">Luxury All-Inclusive Model</span></td>
+              <td class="col-market">Cancún Hotel Zone, Quintana Roo</td>
+              <td class="col-keys text-center cell-bold">650</td>
+              <td class="col-price text-center cell-bold">$600.0M</td>
+              <td class="col-cap text-center cell-bold">5.00% / 6.70%</td>
+              <td class="col-thesis"><strong>Operating</strong> &bull; Trophy oceanfront asset, high operational scale, premier ADR in core Caribbean tourist corridor[span_2](start_span)[span_2](end_span).</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
-  </section>
+    <footer class="page-footer">
+      <span>Royal Coast Properties</span>
+      <span>Institutional Hospitality Acquisitions</span>
+      <span>Page 1 of 14</span>
+    </footer>
+  </div>
 
-  <!-- TARJETAS DE ACTIVOS -->
-  <section id="activos" class="py-16 px-6 max-w-7xl mx-auto border-t border-slate-900">
-    <div class="text-center max-w-2xl mx-auto mb-12 space-y-3">
-      <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Activos en Cartera</h2>
-      <p class="text-sm text-slate-400">
-        Haz clic en una categoría para seleccionarla en el formulario de discovery.
+  <!-- ==================== PÁGINA 2 (Ref #2) ==================== -->
+  <div class="page-sheet">
+    <div>
+      <div class="section-ribbon">Prime Coastal &amp; Flagship Resort Assets</div>
+      <div class="hero-container-standard">
+        <img src="src/2.gpt-image-2.5-sunburst_a_Actúa_como_un_diseña (1).png" alt="Asset Ref #2" class="hero-image">
+      </div>
+      <div class="executive-section">
+        <div class="header-bar">
+          <div class="title-group">
+            <h2 class="asset-title">Asset Ref #2: Premier Oceanfront Golf &amp; Spa Resort (AAA 4-Diamond)</h2>
+            <span class="asset-subtitle">Portfolio Code: RCP-BCS-515M &nbsp;|&nbsp; Confirmatory Due Diligence</span>
+          </div>
+          <span class="price-value">$515.0M USD</span>
+        </div>
+        <table class="metrics-table">
+          <thead>
+            <tr>
+              <th class="col-concept">Concept / Classification</th>
+              <th class="col-market">Market / Prime Corridor</th>
+              <th class="col-keys text-center">Keys</th>
+              <th class="col-price text-center">Asking Price</th>
+              <th class="col-cap text-center">Cap Rate</th>
+              <th class="col-thesis">Status / Investment Thesis</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="col-concept"><strong>AAA 4-Diamond All-Inclusive &amp; Golf</strong><br><span class="cell-muted">Championship Golf Integration</span></td>
+              <td class="col-market">San José del Cabo Corridor, B.C.S.</td>
+              <td class="col-keys text-center cell-bold">500</td>
+              <td class="col-price text-center cell-bold">$515.0M</td>
+              <td class="col-cap text-center cell-bold">4.50% / 6.20%</td>
+              <td class="col-thesis"><strong>Operating</strong> &bull; Elite Los Cabos location, resilient USD revenues, robust high-yield profile and high barriers to entry[span_3](start_span)[span_3](end_span).</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <footer class="page-footer">
+      <span>Royal Coast Properties</span>
+      <span>Institutional Hospitality Acquisitions</span>
+      <span>Page 1 of 14</span>
+    </footer>
+  </div>
+
+  <!-- ==================== PÁGINA 3 (Ref #3) ==================== -->
+  <div class="page-sheet">
+    <div>
+      <div class="section-ribbon">Prime Coastal &amp; Flagship Resort Assets</div>
+      <div class="hero-container-standard">
+        <img src="src/3.gpt-image-2.5-sunburst_a_Actúa_como_un_diseña (1).png" alt="Asset Ref #3" class="hero-image">
+      </div>
+      <div class="executive-section">
+        <div class="header-bar">
+          <div class="title-group">
+            <h2 class="asset-title">Asset Ref #3: Landmark High-Rise Beachfront Resort</h2>
+            <span class="asset-subtitle">Portfolio Code: RCP-MX-480M &nbsp;|&nbsp; Confirmatory Due Diligence</span>
+          </div>
+          <span class="price-value">$480.0M USD</span>
+        </div>
+        <table class="metrics-table">
+          <thead>
+            <tr>
+              <th class="col-concept">Concept / Classification</th>
+              <th class="col-market">Market / Prime Corridor</th>
+              <th class="col-keys text-center">Keys</th>
+              <th class="col-price text-center">Asking Price</th>
+              <th class="col-cap text-center">Cap Rate</th>
+              <th class="col-thesis">Status / Investment Thesis</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="col-concept"><strong>Landmark High-Rise All-Inclusive</strong><br><span class="cell-muted">Signature Caribbean Tower Architecture</span></td>
+              <td class="col-market">Cancún Hotel Zone, Quintana Roo</td>
+              <td class="col-keys text-center cell-bold">497</td>
+              <td class="col-price text-center cell-bold">$480.0M</td>
+              <td class="col-cap text-center cell-bold">4.80% / 6.50%</td>
+              <td class="col-thesis"><strong>Operating</strong> &bull; Institutional-grade high-rise asset in top-performing corridor with high year-round international occupancy[span_4](start_span)[span_4](end_span).</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <footer class="page-footer">
+      <span>Royal Coast Properties</span>
+      <span>Institutional Hospitality Acquisitions</span>
+      <span>Page 2 of 14</span>
+    </footer>
+  </div>
+
+  <!-- ==================== PÁGINA 4 (Ref #4) ==================== -->
+  <div class="page-sheet">
+    <div>
+      <div class="section-ribbon">Pacific Coast &amp; Exclusive Hillside Assets</div>
+      <div class="hero-container-standard">
+        <img src="src/4.gpt-image-2.5-sunburst_a_Actúa_como_un_diseña (1).png" alt="Asset Ref #4" class="hero-image">
+      </div>
+      <div class="executive-section">
+        <div class="header-bar">
+          <div class="title-group">
+            <h2 class="asset-title">Asset Ref #4: Oceanfront Suites &amp; Golf Resort Corridor</h2>
+            <span class="asset-subtitle">Portfolio Code: RCP-BCS-260M &nbsp;|&nbsp; Confirmatory Due Diligence</span>
+          </div>
+          <span class="price-value">$260.0M USD</span>
+        </div>
+        <table class="metrics-table">
+          <thead>
+            <tr>
+              <th class="col-concept">Concept / Classification</th>
+              <th class="col-market">Market / Prime Corridor</th>
+              <th class="col-keys text-center">Keys</th>
+              <th class="col-price text-center">Asking Price</th>
+              <th class="col-cap text-center">Cap Rate</th>
+              <th class="col-thesis">Status / Investment Thesis</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="col-concept"><strong>All-Suites Coastal Luxury Resort</strong><br><span class="cell-muted">Oceanfront Golf Corridor Asset</span></td>
+              <td class="col-market">Transpeninsular Corridor, Los Cabos, B.C.S.</td>
+              <td class="col-keys text-center cell-bold">255</td>
+              <td class="col-price text-center cell-bold">$260.0M</td>
+              <td class="col-cap text-center cell-bold">4.70% / 6.40%</td>
+              <td class="col-thesis"><strong>Operating</strong> &bull; Oceanfront trophy property with proven cash flow, established luxury recognition, and strong ADR resilience[span_5](start_span)[span_5](end_span).</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <footer class="page-footer">
+      <span>Royal Coast Properties</span>
+      <span>Institutional Hospitality Acquisitions</span>
+      <span>Page 2 of 14</span>
+    </footer>
+  </div>
+
+  <!-- ==================== PÁGINA 5 (Ref #5) ==================== -->
+  <div class="page-sheet">
+    <div>
+      <div class="section-ribbon">Pacific Coast &amp; Exclusive Hillside Assets</div>
+      <div class="hero-container-standard">
+        <img src="src/5.gpt-image-2.5-sunburst_a_Actúa_como_un_diseña (1).png" alt="Asset Ref #5" class="hero-image">
+      </div>
+      <div class="executive-section">
+        <div class="header-bar">
+          <div class="title-group">
+            <h2 class="asset-title">Asset Ref #5: Prime Bay Front Resort Hotel</h2>
+            <span class="asset-subtitle">Portfolio Code: RCP-PAC-110M &nbsp;|&nbsp; Confirmatory Due Diligence</span>
+          </div>
+          <span class="price-value">$110.0M USD</span>
+        </div>
+        <table class="metrics-table">
+          <thead>
+            <tr>
+              <th class="col-concept">Concept / Classification</th>
+              <th class="col-market">Market / Prime Corridor</th>
+              <th class="col-keys text-center">Keys</th>
+              <th class="col-price text-center">Asking Price</th>
+              <th class="col-cap text-center">Cap Rate</th>
+              <th class="col-thesis">Status / Investment Thesis</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="col-concept"><strong>Full-Service Bay Resort</strong><br><span class="cell-muted">Established Coastal Destination Flag</span></td>
+              <td class="col-market">Central Hotel Zone, Puerto Vallarta, Jalisco</td>
+              <td class="col-keys text-center cell-bold">340</td>
+              <td class="col-price text-center cell-bold">$110.0M</td>
+              <td class="col-cap text-center cell-bold">5.20% / 7.00%</td>
+              <td class="col-thesis"><strong>Operating</strong> &bull; Mature destination with stable year-round domestic and West Coast US travel demand; attractive initial cap rate[span_6](start_span)[span_6](end_span).</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <footer class="page-footer">
+      <span>Royal Coast Properties</span>
+      <span>Institutional Hospitality Acquisitions</span>
+      <span>Page 3 of 14</span>
+    </footer>
+  </div>
+
+  <!-- ==================== PÁGINA 6 (Ref #6) ==================== -->
+  <div class="page-sheet">
+    <div>
+      <div class="section-ribbon">Growth Corridors &amp; Commercial Hubs</div>
+      <div class="hero-container-standard">
+        <img src="src/6.gpt-image-2.5-sunburst_a_Actúa_como_un_diseña (1).png" alt="Asset Ref #6" class="hero-image">
+      </div>
+      <div class="executive-section">
+        <div class="header-bar">
+          <div class="title-group">
+            <h2 class="asset-title">Asset Ref #6: Hillside Bay View Luxury Boutique Development</h2>
+            <span class="asset-subtitle">Portfolio Code: RCP-PAC-66M &nbsp;|&nbsp; Confirmatory Due Diligence</span>
+          </div>
+          <span class="price-value">$66.0M USD</span>
+        </div>
+        <table class="metrics-table">
+          <thead>
+            <tr>
+              <th class="col-concept">Concept / Classification</th>
+              <th class="col-market">Market / Prime Corridor</th>
+              <th class="col-keys text-center">Keys</th>
+              <th class="col-price text-center">Asking Price</th>
+              <th class="col-cap text-center">Cap Rate</th>
+              <th class="col-thesis">Status / Investment Thesis</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="col-concept"><strong>Boutique Hospitality &amp; Branded Residences</strong><br><span class="cell-muted">Panoramic Ocean View Site</span></td>
+              <td class="col-market">Conchas Chinas, Puerto Vallarta, Jalisco</td>
+              <td class="col-keys text-center cell-bold">120</td>
+              <td class="col-price text-center cell-bold">$66.0M</td>
+              <td class="col-cap text-center cell-bold">5.80% / 7.80%</td>
+              <td class="col-thesis"><strong>Flexible</strong> &bull; Elite hillside location optimal for ultra-luxury boutique conversion or high-end branded residences program[span_7](start_span)[span_7](end_span).</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <footer class="page-footer">
+      <span>Royal Coast Properties</span>
+      <span>Institutional Hospitality Acquisitions</span>
+      <span>Page 3 of 14</span>
+    </footer>
+  </div>
+
+  <!-- ==================== PÁGINA 7 (Ref #7) ==================== -->
+  <div class="page-sheet">
+    <div>
+      <div class="section-ribbon">Growth Corridors &amp; Commercial Hubs</div>
+      <div class="hero-container-standard">
+        <img src="src/7.gpt-image-2.5-sunburst_a_Actúa_como_un_diseña (1).png" alt="Asset Ref #7" class="hero-image">
+      </div>
+      <div class="executive-section">
+        <div class="header-bar">
+          <div class="title-group">
+            <h2 class="asset-title">Asset Ref #7: Main Commercial &amp; Tourism Avenue Asset</h2>
+            <span class="asset-subtitle">Portfolio Code: RCP-RN-28M &nbsp;|&nbsp; Confirmatory Due Diligence</span>
+          </div>
+          <span class="price-value">$28.0M USD</span>
+        </div>
+        <table class="metrics-table">
+          <thead>
+            <tr>
+              <th class="col-concept">Concept / Classification</th>
+              <th class="col-market">Market / Prime Corridor</th>
+              <th class="col-keys text-center">Keys</th>
+              <th class="col-price text-center">Asking Price</th>
+              <th class="col-cap text-center">Cap Rate</th>
+              <th class="col-thesis">Status / Investment Thesis</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="col-concept"><strong>Select Service / Mixed-Use Development</strong><br><span class="cell-muted">High-Volume Growth Corridor</span></td>
+              <td class="col-market">Nuevo Nayarit Corridor, Nayarit</td>
+              <td class="col-keys text-center cell-bold">108</td>
+              <td class="col-price text-center cell-bold">$28.0M</td>
+              <td class="col-cap text-center cell-bold">5.40% / 7.20%</td>
+              <td class="col-thesis"><strong>Operating</strong> &bull; High-traffic growth avenue in Riviera Nayarit; optimal entry pricing for expansion into select-service hospitality[span_8](start_span)[span_8](end_span).</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <footer class="page-footer">
+      <span>Royal Coast Properties</span>
+      <span>Institutional Hospitality Acquisitions</span>
+      <span>Page 4 of 14</span>
+    </footer>
+  </div>
+
+  <!-- ==================== PÁGINA 8 (Ref #8) ==================== -->
+  <div class="page-sheet">
+    <div>
+      <div class="section-ribbon">Metropolitan Business &amp; Full-Service Portfolios</div>
+      <div class="hero-container-standard">
+        <img src="src/8.gpt-image-2.5-sunburst_a_Actúa_como_un_diseña (1).png" alt="Asset Ref #8" class="hero-image">
+      </div>
+      <div class="executive-section">
+        <div class="header-bar">
+          <div class="title-group">
+            <h2 class="asset-title">Asset Ref #8: Prime Energy &amp; Maritime Hub Business Hotel</h2>
+            <span class="asset-subtitle">Portfolio Code: RCP-CORP-20.9M &nbsp;|&nbsp; Confirmatory Due Diligence</span>
+          </div>
+          <span class="price-value">$20.97M USD</span>
+        </div>
+        <table class="metrics-table">
+          <thead>
+            <tr>
+              <th class="col-concept">Concept / Classification</th>
+              <th class="col-market">Market / Prime Corridor</th>
+              <th class="col-keys text-center">Keys</th>
+              <th class="col-price text-center">Asking Price</th>
+              <th class="col-cap text-center">Cap Rate</th>
+              <th class="col-thesis">Status / Investment Thesis</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="col-concept"><strong>Select-Service Corporate Flag</strong><br><span class="cell-muted">Offshore Energy Services Gateway</span></td>
+              <td class="col-market">Av. Concordia Hub, Cd. del Carmen, Campeche</td>
+              <td class="col-keys text-center cell-bold">131</td>
+              <td class="col-price text-center cell-bold">$20.97M</td>
+              <td class="col-cap text-center cell-bold">6.80% / 8.40%</td>
+              <td class="col-thesis"><strong>Operating</strong> &bull; Strategic hub for oil &amp; energy corporate contracting; high-yield stabilized cash flow with institutional brand equity[span_9](start_span)[span_9](end_span).</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <footer class="page-footer">
+      <span>Royal Coast Properties</span>
+      <span>Institutional Hospitality Acquisitions</span>
+      <span>Page 4 of 14</span>
+    </footer>
+  </div>
+
+  <!-- ==================== PÁGINA 9 (Ref #9 & #10) ==================== -->
+  <div class="page-sheet">
+    <div>
+      <div class="section-ribbon">Metropolitan Business &amp; Full-Service Portfolios</div>
+      <!-- Ref #9 -->
+      <div class="hero-container-compact"><div class="hero-placeholder-box">[PHOTO PLACEHOLDER: CORPORATE TOWER &amp; BUSINESS DISTRICT - QUERÉTARO]</div></div>
+      <div class="executive-section" style="margin-bottom: 2mm;">
+        <div class="header-bar">
+          <div class="title-group">
+            <h2 class="asset-title">Asset Ref #9: Central Industrial Corridor Business Hotel</h2>
+            <span class="asset-subtitle">Portfolio Code: RCP-CORP-19.7M | Confirmatory Due Diligence</span>
+          </div>
+          <span class="price-value">$19.76M USD</span>
+        </div>
+        <table class="metrics-table">
+          <thead><tr><th class="col-concept">Concept / Classification</th><th class="col-market">Market / Prime Corridor</th><th class="col-keys text-center">Keys</th><th class="col-price text-center">Asking Price</th><th class="col-cap text-center">Cap Rate</th><th class="col-thesis">Status / Investment Thesis</th></tr></thead>
+          <tbody><tr>
+            <td class="col-concept"><strong>Corporate Select-Service Hotel</strong><br><span class="cell-muted">Aerospace &amp; Tech Hub Flag</span></td>
+            <td class="col-market">Centro Sur Business Corridor, Querétaro, Qro.</td>
+            <td class="col-keys text-center cell-bold">175</td>
+            <td class="col-price text-center cell-bold">$19.76M</td>
+            <td class="col-cap text-center cell-bold">6.90% / 8.60%</td>
+            <td class="col-thesis"><strong>Operating</strong> &bull; High industrial &amp; aerospace corporate demand; located in one of Mexico's fastest growing economic zones[span_10](start_span)[span_10](end_span).</td>
+          </tr></tbody>
+        </table>
+      </div>
+      <!-- Ref #10 -->
+      <div class="hero-container-compact"><div class="hero-placeholder-box">[PHOTO PLACEHOLDER: UPSCALE HOTEL ELEVATION &amp; GROUNDS - ANGELÓPOLIS PUEBLA]</div></div>
+      <div class="executive-section">
+        <div class="header-bar">
+          <div class="title-group">
+            <h2 class="asset-title">Asset Ref #10: Upscale Full-Service Commercial District Hotel</h2>
+            <span class="asset-subtitle">Portfolio Code: RCP-CORP-18.2M | Confirmatory Due Diligence</span>
+          </div>
+          <span class="price-value">$18.23M USD</span>
+        </div>
+        <table class="metrics-table">
+          <thead><tr><th class="col-concept">Concept / Classification</th><th class="col-market">Market / Prime Corridor</th><th class="col-keys text-center">Keys</th><th class="col-price text-center">Asking Price</th><th class="col-cap text-center">Cap Rate</th><th class="col-thesis">Status / Investment Thesis</th></tr></thead>
+          <tbody><tr>
+            <td class="col-concept"><strong>Full-Service Upscale Hotel</strong><br><span class="cell-muted">Flagship Commercial &amp; Medical Corridor</span></td>
+            <td class="col-market">Angelópolis Commercial Hub, Puebla, Pue.</td>
+            <td class="col-keys text-center cell-bold">153</td>
+            <td class="col-price text-center cell-bold">$18.23M</td>
+            <td class="col-cap text-center cell-bold">6.70% / 8.30%</td>
+            <td class="col-thesis"><strong>Operating</strong> &bull; Top-tier address in affluent retail &amp; medical hub; excellent reputation and premium banquet/MICE revenues[span_11](start_span)[span_11](end_span).</td>
+          </tr></tbody>
+        </table>
+      </div>
+    </div>
+    <footer class="page-footer">
+      <span>Royal Coast Properties</span>
+      <span>Institutional Hospitality Acquisitions</span>
+      <span>Page 5 of 14</span>
+    </footer>
+  </div>
+
+  <!-- ==================== PÁGINA 10 (Ref #11 & #12) ==================== -->
+  <div class="page-sheet">
+    <div>
+      <div class="section-ribbon">Industrial Corridor &amp; Manufacturing Hub Assets</div>
+      <!-- Ref #11 -->
+      <div class="hero-container-compact"><div class="hero-placeholder-box">[PHOTO PLACEHOLDER: COMMERCIAL BOULEVARD HOTEL EXTERIOR - LEÓN]</div></div>
+      <div class="executive-section" style="margin-bottom: 2mm;">
+        <div class="header-bar">
+          <div class="title-group">
+            <h2 class="asset-title">Asset Ref #11: Manufacturing Capital Select-Service Hotel</h2>
+            <span class="asset-subtitle">Portfolio Code: RCP-CORP-10.8M | Confirmatory Due Diligence</span>
+          </div>
+          <span class="price-value">$10.84M USD</span>
+        </div>
+        <table class="metrics-table">
+          <thead><tr><th class="col-concept">Concept / Classification</th><th class="col-market">Market / Prime Corridor</th><th class="col-keys text-center">Keys</th><th class="col-price text-center">Asking Price</th><th class="col-cap text-center">Cap Rate</th><th class="col-thesis">Status / Investment Thesis</th></tr></thead>
+          <tbody><tr>
+            <td class="col-concept"><strong>Select-Service Business Hotel</strong><br><span class="cell-muted">Convention &amp; Industrial Gateway</span></td>
+            <td class="col-market">Main Commercial Boulevard, León, Guanajuato</td>
+            <td class="col-keys text-center cell-bold">160</td>
+            <td class="col-price text-center cell-bold">$10.84M</td>
+            <td class="col-cap text-center cell-bold">7.00% / 8.80%</td>
+            <td class="col-thesis"><strong>Operating</strong> &bull; Close proximity to Poliforum León convention center and industrial corridors; consistent high weekday occupancy[span_12](start_span)[span_12](end_span).</td>
+          </tr></tbody>
+        </table>
+      </div>
+      <!-- Ref #12 -->
+      <div class="hero-container-compact"><div class="hero-placeholder-box">[PHOTO PLACEHOLDER: STEEL CORRIDOR HOTEL &amp; AMENITIES - MONCLOVA]</div></div>
+      <div class="executive-section">
+        <div class="header-bar">
+          <div class="title-group">
+            <h2 class="asset-title">Asset Ref #12: Steel &amp; Heavy Industry Hub Hotel</h2>
+            <span class="asset-subtitle">Portfolio Code: RCP-CORP-10.6M | Confirmatory Due Diligence</span>
+          </div>
+          <span class="price-value">$10.64M USD</span>
+        </div>
+        <table class="metrics-table">
+          <thead><tr><th class="col-concept">Concept / Classification</th><th class="col-market">Market / Prime Corridor</th><th class="col-keys text-center">Keys</th><th class="col-price text-center">Asking Price</th><th class="col-cap text-center">Cap Rate</th><th class="col-thesis">Status / Investment Thesis</th></tr></thead>
+          <tbody><tr>
+            <td class="col-concept"><strong>Industrial Business Hotel</strong><br><span class="cell-muted">Corporate Long-Stay Base</span></td>
+            <td class="col-market">Industrial Central Boulevard, Monclova, Coahuila</td>
+            <td class="col-keys text-center cell-bold">121</td>
+            <td class="col-price text-center cell-bold">$10.64M</td>
+            <td class="col-cap text-center cell-bold">7.20% / 9.00%</td>
+            <td class="col-thesis"><strong>Operating</strong> &bull; Dominant hospitality asset in Coahuila's industrial steel corridor; strong margins and corporate long-stay contracts[span_13](start_span)[span_13](end_span).</td>
+          </tr></tbody>
+        </table>
+      </div>
+    </div>
+    <footer class="page-footer">
+      <span>Royal Coast Properties</span>
+      <span>Institutional Hospitality Acquisitions</span>
+      <span>Page 6 of 14</span>
+    </footer>
+  </div>
+
+  <!-- ==================== PÁGINA 11 (Ref #13 & #14) ==================== -->
+  <div class="page-sheet">
+    <div>
+      <div class="section-ribbon">Greater Mexico City Corporate Corridor Assets</div>
+      <!-- Ref #13 -->
+      <div class="hero-container-compact"><div class="hero-placeholder-box">[PHOTO PLACEHOLDER: HIGHWAY ACCESS &amp; COMMERCIAL COMPLEX - PERIFÉRICO NORTE]</div></div>
+      <div class="executive-section" style="margin-bottom: 2mm;">
+        <div class="header-bar">
+          <div class="title-group">
+            <h2 class="asset-title">Asset Ref #13: Logistics &amp; North Metro Artery Business Hotel</h2>
+            <span class="asset-subtitle">Portfolio Code: RCP-CORP-9.5M | Confirmatory Due Diligence</span>
+          </div>
+          <span class="price-value">$9.51M USD</span>
+        </div>
+        <table class="metrics-table">
+          <thead><tr><th class="col-concept">Concept / Classification</th><th class="col-market">Market / Prime Corridor</th><th class="col-keys text-center">Keys</th><th class="col-price text-center">Asking Price</th><th class="col-cap text-center">Cap Rate</th><th class="col-thesis">Status / Investment Thesis</th></tr></thead>
+          <tbody><tr>
+            <td class="col-concept"><strong>Metropolitan Business Hotel</strong><br><span class="cell-muted">Automotive &amp; Distribution Axis</span></td>
+            <td class="col-market">Northern Logistics Artery, Greater Mexico City</td>
+            <td class="col-keys text-center cell-bold">127</td>
+            <td class="col-price text-center cell-bold">$9.51M</td>
+            <td class="col-cap text-center cell-bold">7.10% / 8.90%</td>
+            <td class="col-thesis"><strong>Operating</strong> &bull; Serves northern logistics and distribution parks with high occupancy from automotive and distribution logistics[span_14](start_span)[span_14](end_span).</td>
+          </tr></tbody>
+        </table>
+      </div>
+      <!-- Ref #14 -->
+      <div class="hero-container-compact"><div class="hero-placeholder-box">[PHOTO PLACEHOLDER: URBAN METRO TOWER &amp; BUSINESS ROOMS - TLALNEPANTLA]</div></div>
+      <div class="executive-section">
+        <div class="header-bar">
+          <div class="title-group">
+            <h2 class="asset-title">Asset Ref #14: Industrial &amp; Corporate District Hotel</h2>
+            <span class="asset-subtitle">Portfolio Code: RCP-CORP-9.0M | Confirmatory Due Diligence</span>
+          </div>
+          <span class="price-value">$9.03M USD</span>
+        </div>
+        <table class="metrics-table">
+          <thead><tr><th class="col-concept">Concept / Classification</th><th class="col-market">Market / Prime Corridor</th><th class="col-keys text-center">Keys</th><th class="col-price text-center">Asking Price</th><th class="col-cap text-center">Cap Rate</th><th class="col-thesis">Status / Investment Thesis</th></tr></thead>
+          <tbody><tr>
+            <td class="col-concept"><strong>Corporate &amp; Industrial Hotel</strong><br><span class="cell-muted">Metro Core Manufacturing Hub</span></td>
+            <td class="col-market">Central Industrial Axis, Tlalnepantla, Edomex</td>
+            <td class="col-keys text-center cell-bold">131</td>
+            <td class="col-price text-center cell-bold">$9.03M</td>
+            <td class="col-cap text-center cell-bold">7.30% / 9.10%</td>
+            <td class="col-thesis"><strong>Operating</strong> &bull; Established presence in premier manufacturing zone; high repeat corporate occupancy with stable cash yields[span_15](start_span)[span_15](end_span).</td>
+          </tr></tbody>
+        </table>
+      </div>
+    </div>
+    <footer class="page-footer">
+      <span>Royal Coast Properties</span>
+      <span>Institutional Hospitality Acquisitions</span>
+      <span>Page 7 of 14</span>
+    </footer>
+  </div>
+
+  <!-- ==================== PÁGINA 12 (Ref #15 & #16) ==================== -->
+  <div class="page-sheet">
+    <div>
+      <div class="section-ribbon">Strategic Select-Service Business Network</div>
+      <!-- Ref #15 -->
+      <div class="hero-container-compact"><div class="hero-placeholder-box">[PHOTO PLACEHOLDER: CONTEMPORARY SELECT-SERVICE EXTERIOR - QUERÉTARO]</div></div>
+      <div class="executive-section" style="margin-bottom: 2mm;">
+        <div class="header-bar">
+          <div class="title-group">
+            <h2 class="asset-title">Asset Ref #15: Lean Select-Service Corporate Hotel</h2>
+            <span class="asset-subtitle">Portfolio Code: RCP-CORP-8.7M | Confirmatory Due Diligence</span>
+          </div>
+          <span class="price-value">$8.72M USD</span>
+        </div>
+        <table class="metrics-table">
+          <thead><tr><th class="col-concept">Concept / Classification</th><th class="col-market">Market / Prime Corridor</th><th class="col-keys text-center">Keys</th><th class="col-price text-center">Asking Price</th><th class="col-cap text-center">Cap Rate</th><th class="col-thesis">Status / Investment Thesis</th></tr></thead>
+          <tbody><tr>
+            <td class="col-concept"><strong>Lean Select-Service Hotel</strong><br><span class="cell-muted">High-Efficiency Business Model</span></td>
+            <td class="col-market">Centro Sur Commercial District, Querétaro, Qro.</td>
+            <td class="col-keys text-center cell-bold">126</td>
+            <td class="col-price text-center cell-bold">$8.72M</td>
+            <td class="col-cap text-center cell-bold">7.40% / 9.20%</td>
+            <td class="col-thesis"><strong>Operating</strong> &bull; Synergistic corporate hub location; ultra-lean operating model generating exceptional net operating margins[span_16](start_span)[span_16](end_span).</td>
+          </tr></tbody>
+        </table>
+      </div>
+      <!-- Ref #16 -->
+      <div class="hero-container-compact"><div class="hero-placeholder-box">[PHOTO PLACEHOLDER: AUTOMOTIVE CORRIDOR HOTEL COMPLEX - FINSA PUEBLA]</div></div>
+      <div class="executive-section">
+        <div class="header-bar">
+          <div class="title-group">
+            <h2 class="asset-title">Asset Ref #16: Major Automotive Cluster Business Hotel</h2>
+            <span class="asset-subtitle">Portfolio Code: RCP-CORP-8.2M | Confirmatory Due Diligence</span>
+          </div>
+          <span class="price-value">$8.26M USD</span>
+        </div>
+        <table class="metrics-table">
+          <thead><tr><th class="col-concept">Concept / Classification</th><th class="col-market">Market / Prime Corridor</th><th class="col-keys text-center">Keys</th><th class="col-price text-center">Asking Price</th><th class="col-cap text-center">Cap Rate</th><th class="col-thesis">Status / Investment Thesis</th></tr></thead>
+          <tbody><tr>
+            <td class="col-concept"><strong>Automotive Cluster Business Hotel</strong><br><span class="cell-muted">Direct Tier-1 Industrial Park Access</span></td>
+            <td class="col-market">Premier Automotive Park Corridor, Puebla, Pue.</td>
+            <td class="col-keys text-center cell-bold">123</td>
+            <td class="col-price text-center cell-bold">$8.26M</td>
+            <td class="col-cap text-center cell-bold">7.20% / 9.00%</td>
+            <td class="col-thesis"><strong>Operating</strong> &bull; Directly serves Volkswagen and supplier ecosystem; sustained international corporate traveler base[span_17](start_span)[span_17](end_span).</td>
+          </tr></tbody>
+        </table>
+      </div>
+    </div>
+    <footer class="page-footer">
+      <span>Royal Coast Properties</span>
+      <span>Institutional Hospitality Acquisitions</span>
+      <span>Page 8 of 14</span>
+    </footer>
+  </div>
+
+  <!-- ==================== PÁGINA 13 (Ref #17 & #18) ==================== -->
+  <div class="page-sheet">
+    <div>
+      <div class="section-ribbon">Border &amp; Metropolitan Select-Service Assets</div>
+      <!-- Ref #17 -->
+      <div class="hero-container-compact"><div class="hero-placeholder-box">[PHOTO PLACEHOLDER: NAUCALPAN METRO ARTERY &amp; FACADE]</div></div>
+      <div class="executive-section" style="margin-bottom: 2mm;">
+        <div class="header-bar">
+          <div class="title-group">
+            <h2 class="asset-title">Asset Ref #17: Central Arterial Corporate Hotel</h2>
+            <span class="asset-subtitle">Portfolio Code: RCP-CORP-8.1M | Confirmatory Due Diligence</span>
+          </div>
+          <span class="price-value">$8.15M USD</span>
+        </div>
+        <table class="metrics-table">
+          <thead><tr><th class="col-concept">Concept / Classification</th><th class="col-market">Market / Prime Corridor</th><th class="col-keys text-center">Keys</th><th class="col-price text-center">Asking Price</th><th class="col-cap text-center">Cap Rate</th><th class="col-thesis">Status / Investment Thesis</th></tr></thead>
+          <tbody><tr>
+            <td class="col-concept"><strong>Corporate Business Hotel</strong><br><span class="cell-muted">High-Density Industrial Arterial Frontage</span></td>
+            <td class="col-market">Av. Gustavo Baz Corridor, Naucalpan, Edomex</td>
+            <td class="col-keys text-center cell-bold">119</td>
+            <td class="col-price text-center cell-bold">$8.15M</td>
+            <td class="col-cap text-center cell-bold">7.30% / 9.10%</td>
+            <td class="col-thesis"><strong>Operating</strong> &bull; Primary arterial connection between CDMX and industrial zones; high corporate contract retention[span_18](start_span)[span_18](end_span).</td>
+          </tr></tbody>
+        </table>
+      </div>
+      <!-- Ref #18 -->
+      <div class="hero-container-compact"><div class="hero-placeholder-box">[PHOTO PLACEHOLDER: CROSS-BORDER CORRIDOR HOTEL - NUEVO LAREDO]</div></div>
+      <div class="executive-section">
+        <div class="header-bar">
+          <div class="title-group">
+            <h2 class="asset-title">Asset Ref #18: Latin America Freight Gateway Hotel</h2>
+            <span class="asset-subtitle">Portfolio Code: RCP-BORD-8.1M | Confirmatory Due Diligence</span>
+          </div>
+          <span class="price-value">$8.10M USD</span>
+        </div>
+        <table class="metrics-table">
+          <thead><tr><th class="col-concept">Concept / Classification</th><th class="col-market">Market / Prime Corridor</th><th class="col-keys text-center">Keys</th><th class="col-price text-center">Asking Price</th><th class="col-cap text-center">Cap Rate</th><th class="col-thesis">Status / Investment Thesis</th></tr></thead>
+          <tbody><tr>
+            <td class="col-concept"><strong>Cross-Border Trade Hotel</strong><br><span class="cell-muted">Customs Logistics &amp; Trade Hub</span></td>
+            <td class="col-market">Trade Commerce Corridor, Nuevo Laredo, Tamaulipas</td>
+            <td class="col-keys text-center cell-bold">120</td>
+            <td class="col-price text-center cell-bold">$8.10M</td>
+            <td class="col-cap text-center cell-bold">7.50% / 9.30%</td>
+            <td class="col-thesis"><strong>Operating</strong> &bull; Positioned at Latin America's #1 land freight port of entry, steady corporate trade demand with minimal cyclicality[span_19](start_span)[span_19](end_span).</td>
+          </tr></tbody>
+        </table>
+      </div>
+    </div>
+    <footer class="page-footer">
+      <span>Royal Coast Properties</span>
+      <span>Institutional Hospitality Acquisitions</span>
+      <span>Page 9 of 14</span>
+    </footer>
+  </div>
+
+  <!-- ==================== PÁGINA 14 (Ref #19 & #20) ==================== -->
+  <div class="page-sheet">
+    <div>
+      <div class="section-ribbon">Nearshoring &amp; Northern Hub Portfolios</div>
+      <!-- Ref #19 -->
+      <div class="hero-container-compact"><div class="hero-placeholder-box">[PHOTO PLACEHOLDER: AEROSPACE &amp; AUTO CORRIDOR EXTERIOR - SALTILLO]</div></div>
+      <div class="executive-section" style="margin-bottom: 2mm;">
+        <div class="header-bar">
+          <div class="title-group">
+            <h2 class="asset-title">Asset Ref #19: Nearshoring EV Cluster Select-Service Hotel</h2>
+            <span class="asset-subtitle">Portfolio Code: RCP-IND-7.8M | Confirmatory Due Diligence</span>
+          </div>
+          <span class="price-value">$7.82M USD</span>
+        </div>
+        <table class="metrics-table">
+          <thead><tr><th class="col-concept">Concept / Classification</th><th class="col-market">Market / Prime Corridor</th><th class="col-keys text-center">Keys</th><th class="col-price text-center">Asking Price</th><th class="col-cap text-center">Cap Rate</th><th class="col-thesis">Status / Investment Thesis</th></tr></thead>
+          <tbody><tr>
+            <td class="col-concept"><strong>Select-Service Industrial Hotel</strong><br><span class="cell-muted">EV Manufacturing &amp; Nearshoring Corridor</span></td>
+            <td class="col-market">Saltillo-Monterrey Expressway, Saltillo, Coahuila</td>
+            <td class="col-keys text-center cell-bold">126</td>
+            <td class="col-price text-center cell-bold">$7.82M</td>
+            <td class="col-cap text-center cell-bold">7.50% / 9.40%</td>
+            <td class="col-thesis"><strong>Operating</strong> &bull; Key location on Saltillo-Monterrey EV cluster; robust business traveler traffic driven by nearshoring expansion[span_20](start_span)[span_20](end_span).</td>
+          </tr></tbody>
+        </table>
+      </div>
+      <!-- Ref #20 -->
+      <div class="hero-container-compact"><div class="hero-placeholder-box">[PHOTO PLACEHOLDER: REGIONAL CAPITAL CORPORATE HOTEL - CHIHUAHUA]</div></div>
+      <div class="executive-section">
+        <div class="header-bar">
+          <div class="title-group">
+            <h2 class="asset-title">Asset Ref #20: Aerospace &amp; Advanced Tech Regional Hotel</h2>
+            <span class="asset-subtitle">Portfolio Code: RCP-REG-7.7M | Confirmatory Due Diligence</span>
+          </div>
+          <span class="price-value">$7.70M USD</span>
+        </div>
+        <table class="metrics-table">
+          <thead><tr><th class="col-concept">Concept / Classification</th><th class="col-market">Market / Prime Corridor</th><th class="col-keys text-center">Keys</th><th class="col-price text-center">Asking Price</th><th class="col-cap text-center">Cap Rate</th><th class="col-thesis">Status / Investment Thesis</th></tr></thead>
+          <tbody><tr>
+            <td class="col-concept"><strong>Regional Capital Business Hotel</strong><br><span class="cell-muted">Aerospace &amp; Electronics Campus Hub</span></td>
+            <td class="col-market">Av. Ortiz Mena Commercial Axis, Chihuahua, Chih.</td>
+            <td class="col-keys text-center cell-bold">152</td>
+            <td class="col-price text-center cell-bold">$7.70M</td>
+            <td class="col-cap text-center cell-bold">7.30% / 9.10%</td>
+            <td class="col-thesis"><strong>Operating</strong> &bull; Strong positioning in major aerospace and advanced electronics manufacturing hub; stable domestic corporate yields[span_21](start_span)[span_21](end_span).</td>
+          </tr></tbody>
+        </table>
+      </div>
+    </div>
+    <footer class="page-footer">
+      <span>Royal Coast Properties</span>
+      <span>Institutional Hospitality Acquisitions</span>
+      <span>Page 10 of 14</span>
+    </footer>
+  </div>
+
+  <!-- ==================== PÁGINA 15 (Ref #21 & #22) ==================== -->
+  <div class="page-sheet">
+    <div>
+      <div class="section-ribbon">Energy, Capital &amp; Regional Growth Hubs</div>
+      <!-- Ref #21 -->
+      <div class="hero-container-compact"><div class="hero-placeholder-box">[PHOTO PLACEHOLDER: TEPIC COMMERCIAL CENTER &amp; HOTEL FRONT - PLAZA FORUM]</div></div>
+      <div class="executive-section" style="margin-bottom: 2mm;">
+        <div class="header-bar">
+          <div class="title-group">
+            <h2 class="asset-title">Asset Ref #21: Capital Gateway Commercial Mall Hotel</h2>
+            <span class="asset-subtitle">Portfolio Code: RCP-REG-7.5M | Confirmatory Due Diligence</span>
+          </div>
+          <span class="price-value">$7.59M USD</span>
+        </div>
+        <table class="metrics-table">
+          <thead><tr><th class="col-concept">Concept / Classification</th><th class="col-market">Market / Prime Corridor</th><th class="col-keys text-center">Keys</th><th class="col-price text-center">Asking Price</th><th class="col-cap text-center">Cap Rate</th><th class="col-thesis">Status / Investment Thesis</th></tr></thead>
+          <tbody><tr>
+            <td class="col-concept"><strong>Capital City Retail-Anchored Hotel</strong><br><span class="cell-muted">Integrated Commercial Mall Axis</span></td>
+            <td class="col-market">Regional Forum Commercial Hub, Tepic, Nayarit</td>
+            <td class="col-keys text-center cell-bold">127</td>
+            <td class="col-price text-center cell-bold">$7.59M</td>
+            <td class="col-cap text-center cell-bold">7.40% / 9.20%</td>
+            <td class="col-thesis"><strong>Operating</strong> &bull; Top retail location at Plaza Forum; captures government, agribusiness, and tourism gateway traffic into Nayarit[span_22](start_span)[span_22](end_span).</td>
+          </tr></tbody>
+        </table>
+      </div>
+      <!-- Ref #22 -->
+      <div class="hero-container-compact"><div class="hero-placeholder-box">[PHOTO PLACEHOLDER: MARRIOTT-AFFILIATED MODERN TOWER - VILLAHERMOSA]</div></div>
+      <div class="executive-section">
+        <div class="header-bar">
+          <div class="title-group">
+            <h2 class="asset-title">Asset Ref #22: Energy Corridor Select-Service Hotel</h2>
+            <span class="asset-subtitle">Portfolio Code: RCP-CORP-7.3M | Confirmatory Due Diligence</span>
+          </div>
+          <span class="price-value">$7.38M USD</span>
+        </div>
+        <table class="metrics-table">
+          <thead><tr><th class="col-concept">Concept / Classification</th><th class="col-market">Market / Prime Corridor</th><th class="col-keys text-center">Keys</th><th class="col-price text-center">Asking Price</th><th class="col-cap text-center">Cap Rate</th><th class="col-thesis">Status / Investment Thesis</th></tr></thead>
+          <tbody><tr>
+            <td class="col-concept"><strong>Global Brand Select-Service Flag</strong><br><span class="cell-muted">Corporate Energy Business Center</span></td>
+            <td class="col-market">Prime Energy Corridor, Villahermosa, Tabasco</td>
+            <td class="col-keys text-center cell-bold">134</td>
+            <td class="col-price text-center cell-bold">$7.38M</td>
+            <td class="col-cap text-center cell-bold">7.60% / 9.50%</td>
+            <td class="col-thesis"><strong>Operating</strong> &bull; Strategic location in energy capital; global loyalty program affinity and corporate energy contractor accounts[span_23](start_span)[span_23](end_span).</td>
+          </tr></tbody>
+        </table>
+      </div>
+    </div>
+    <footer class="page-footer">
+      <span>Royal Coast Properties</span>
+      <span>Institutional Hospitality Acquisitions</span>
+      <span>Page 11 of 14</span>
+    </footer>
+  </div>
+
+  <!-- ==================== PÁGINA 16 (Ref #23 & #24) ==================== -->
+  <div class="page-sheet">
+    <div>
+      <div class="section-ribbon">Industrial Corridor &amp; Regional Operations</div>
+      <!-- Ref #23 -->
+      <div class="hero-container-compact"><div class="hero-placeholder-box">[PHOTO PLACEHOLDER: CONTEMPORARY HOTEL FACADE &amp; POOL - LEÓN BOULEVARD]</div></div>
+      <div class="executive-section" style="margin-bottom: 2mm;">
+        <div class="header-bar">
+          <div class="title-group">
+            <h2 class="asset-title">Asset Ref #23: Prime Commercial Artery Hotel Asset</h2>
+            <span class="asset-subtitle">Portfolio Code: RCP-REG-6.8M | Confirmatory Due Diligence</span>
+          </div>
+          <span class="price-value">$6.89M USD</span>
+        </div>
+        <table class="metrics-table">
+          <thead><tr><th class="col-concept">Concept / Classification</th><th class="col-market">Market / Prime Corridor</th><th class="col-keys text-center">Keys</th><th class="col-price text-center">Asking Price</th><th class="col-cap text-center">Cap Rate</th><th class="col-thesis">Status / Investment Thesis</th></tr></thead>
+          <tbody><tr>
+            <td class="col-concept"><strong>Commercial Repositioning Hotel</strong><br><span class="cell-muted">Prime Boulevard Footprint</span></td>
+            <td class="col-market">Main Retail &amp; Commerce Boulevard, León, Guanajuato</td>
+            <td class="col-keys text-center cell-bold">126</td>
+            <td class="col-price text-center cell-bold">$6.89M</td>
+            <td class="col-cap text-center cell-bold">7.70% / 9.60%</td>
+            <td class="col-thesis"><strong>Flexible</strong> &bull; High flexibility for brand conversion or independent boutique repositioning along León's primary retail artery[span_24](start_span)[span_24](end_span).</td>
+          </tr></tbody>
+        </table>
+      </div>
+      <!-- Ref #24 -->
+      <div class="hero-container-compact"><div class="hero-placeholder-box">[PHOTO PLACEHOLDER: FINSA INDUSTRIAL GATEWAY HOTEL - PUEBLA KM 116]</div></div>
+      <div class="executive-section">
+        <div class="header-bar">
+          <div class="title-group">
+            <h2 class="asset-title">Asset Ref #24: High-Efficiency Industrial Park Hotel</h2>
+            <span class="asset-subtitle">Portfolio Code: RCP-IND-5.8M | Confirmatory Due Diligence</span>
+          </div>
+          <span class="price-value">$5.83M USD</span>
+        </div>
+        <table class="metrics-table">
+          <thead><tr><th class="col-concept">Concept / Classification</th><th class="col-market">Market / Prime Corridor</th><th class="col-keys text-center">Keys</th><th class="col-price text-center">Asking Price</th><th class="col-cap text-center">Cap Rate</th><th class="col-thesis">Status / Investment Thesis</th></tr></thead>
+          <tbody><tr>
+            <td class="col-concept"><strong>Industrial Gateway Select Service</strong><br><span class="cell-muted">Direct Highway &amp; Supplier Hub Access</span></td>
+            <td class="col-market">Expressway Industrial Km 116, Puebla, Pue.</td>
+            <td class="col-keys text-center cell-bold">126</td>
+            <td class="col-price text-center cell-bold">$5.83M</td>
+            <td class="col-cap text-center cell-bold">7.80% / 9.80%</td>
+            <td class="col-thesis"><strong>Operating</strong> &bull; Optimal lean cost structure catering directly to technicians and supply chain executives in the Puebla auto hub[span_25](start_span)[span_25](end_span).</td>
+          </tr></tbody>
+        </table>
+      </div>
+    </div>
+    <footer class="page-footer">
+      <span>Royal Coast Properties</span>
+      <span>Institutional Hospitality Acquisitions</span>
+      <span>Page 12 of 14</span>
+    </footer>
+  </div>
+
+  <!-- ==================== PÁGINA 17 (Ref #25 & #26) ==================== -->
+  <div class="page-sheet">
+    <div>
+      <div class="section-ribbon">Regional Centers &amp; Airport Corridor Assets</div>
+      <!-- Ref #25 -->
+      <div class="hero-container-compact"><div class="hero-placeholder-box">[PHOTO PLACEHOLDER: REGIONAL COMMERCIAL HOTEL &amp; COURTYARD - CD. OBREGÓN]</div></div>
+      <div class="executive-section" style="margin-bottom: 2mm;">
+        <div class="header-bar">
+          <div class="title-group">
+            <h2 class="asset-title">Asset Ref #25: Regional Agribusiness Hub Hotel</h2>
+            <span class="asset-subtitle">Portfolio Code: RCP-REG-5.3M | Confirmatory Due Diligence</span>
+          </div>
+          <span class="price-value">$5.30M USD</span>
+        </div>
+        <table class="metrics-table">
+          <thead><tr><th class="col-concept">Concept / Classification</th><th class="col-market">Market / Prime Corridor</th><th class="col-keys text-center">Keys</th><th class="col-price text-center">Asking Price</th><th class="col-cap text-center">Cap Rate</th><th class="col-thesis">Status / Investment Thesis</th></tr></thead>
+          <tbody><tr>
+            <td class="col-concept"><strong>Commercial &amp; Agribusiness Hotel</strong><br><span class="cell-muted">Primary Urban Trading Corridor</span></td>
+            <td class="col-market">Main Commercial Axis, Cd. Obregón, Sonora</td>
+            <td class="col-keys text-center cell-bold">116</td>
+            <td class="col-price text-center cell-bold">$5.30M</td>
+            <td class="col-cap text-center cell-bold">8.00% / 10.10%</td>
+            <td class="col-thesis"><strong>Flexible</strong> &bull; Attractive valuation multiple in primary Sonoran agricultural and commercial trading hub; strong cash yield[span_26](start_span)[span_26](end_span).</td>
+          </tr></tbody>
+        </table>
+      </div>
+      <!-- Ref #26 -->
+      <div class="hero-container-compact"><div class="hero-placeholder-box">[PHOTO PLACEHOLDER: AIRPORT INDUSTRIAL ZONE HOTEL - TOLUCA]</div></div>
+      <div class="executive-section">
+        <div class="header-bar">
+          <div class="title-group">
+            <h2 class="asset-title">Asset Ref #26: Airport &amp; Manufacturing Axis Select Service</h2>
+            <span class="asset-subtitle">Portfolio Code: RCP-AIR-4.5M | Confirmatory Due Diligence</span>
+          </div>
+          <span class="price-value">$4.55M USD</span>
+        </div>
+        <table class="metrics-table">
+          <thead><tr><th class="col-concept">Concept / Classification</th><th class="col-market">Market / Prime Corridor</th><th class="col-keys text-center">Keys</th><th class="col-price text-center">Asking Price</th><th class="col-cap text-center">Cap Rate</th><th class="col-thesis">Status / Investment Thesis</th></tr></thead>
+          <tbody><tr>
+            <td class="col-concept"><strong>Airport Corridor Select Service</strong><br><span class="cell-muted">Aviation &amp; Heavy Industry Park Base</span></td>
+            <td class="col-market">Airport Boulevard Corridor, Toluca, Estado de México</td>
+            <td class="col-keys text-center cell-bold">126</td>
+            <td class="col-price text-center cell-bold">$4.55M</td>
+            <td class="col-cap text-center cell-bold">7.90% / 9.90%</td>
+            <td class="col-thesis"><strong>Operating</strong> &bull; Direct airport connectivity and corporate shuttle service serving Toluca's heavy manufacturing cluster[span_27](start_span)[span_27](end_span).</td>
+          </tr></tbody>
+        </table>
+      </div>
+    </div>
+    <footer class="page-footer">
+      <span>Royal Coast Properties</span>
+      <span>Institutional Hospitality Acquisitions</span>
+      <span>Page 13 of 14</span>
+    </footer>
+  </div>
+
+  <!-- ==================== PÁGINA 18 (Ref #27 + Resumen Consolidado) ==================== -->
+  <div class="page-sheet">
+    <div>
+      <div class="section-ribbon">Entry Valuation Asset &amp; Master Portfolio Summary</div>
+      <!-- Ref #27 -->
+      <div class="hero-container-compact" style="height: 18mm;"><div class="hero-placeholder-box">[PHOTO PLACEHOLDER: SELECT-SERVICE COMPACT HOTEL - MONCLOVA PAPE]</div></div>
+      <div class="executive-section" style="margin-top: 1mm;">
+        <div class="header-bar">
+          <div class="title-group">
+            <h2 class="asset-title">Asset Ref #27: Industrial Heavy Manufacturing Select Service</h2>
+            <span class="asset-subtitle">Portfolio Code: RCP-IND-3.4M | Confirmatory Due Diligence</span>
+          </div>
+          <span class="price-value">$3.40M USD</span>
+        </div>
+        <table class="metrics-table">
+          <thead><tr><th class="col-concept">Concept / Classification</th><th class="col-market">Market / Prime Corridor</th><th class="col-keys text-center">Keys</th><th class="col-price text-center">Asking Price</th><th class="col-cap text-center">Cap Rate</th><th class="col-thesis">Status / Investment Thesis</th></tr></thead>
+          <tbody><tr>
+            <td class="col-concept"><strong>Industrial Select Service</strong><br><span class="cell-muted">High Cash-Yield Entry Asset</span></td>
+            <td class="col-market">Harold R. Pape Industrial Axis, Monclova, Coahuila</td>
+            <td class="col-keys text-center cell-bold">120</td>
+            <td class="col-price text-center cell-bold">$3.40M</td>
+            <td class="col-cap text-center cell-bold">8.20% / 10.40%</td>
+            <td class="col-thesis"><strong>Operating</strong> &bull; Highly attractive entry pricing ($28.3k/key) in established manufacturing corridor; high cash distribution yield[span_28](start_span)[span_28](end_span).</td>
+          </tr></tbody>
+        </table>
+      </div>
+
+      <!-- Resumen Consolidado -->
+      <div class="summary-box">
+        <div class="summary-header">Consolidated Portfolio Distribution Summary</div>
+        <table class="summary-table">
+          <thead>
+            <tr>
+              <th>Asset Segment / Tier</th>
+              <th class="text-center">Properties</th>
+              <th class="text-center">Total Keys</th>
+              <th class="text-center">Valuation Band</th>
+              <th class="text-center">Cap Rate Range</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Ultra-Luxury &amp; Trophy Beachfront Resorts</strong></td>
+              <td class="text-center">4 Assets</td>
+              <td class="text-center">1,902 Keys</td>
+              <td class="text-center">$600.0M &ndash; $260.0M</td>
+              <td class="text-center">4.50% &ndash; 6.70%</td>
+            </tr>
+            <tr>
+              <td><strong>Full-Service Coastal &amp; Boutique Destinations</strong></td>
+              <td class="text-center">3 Assets</td>
+              <td class="text-center">568 Keys</td>
+              <td class="text-center">$110.0M &ndash; $28.0M</td>
+              <td class="text-center">5.20% &ndash; 7.80%</td>
+            </tr>
+            <tr>
+              <td><strong>Metropolitan &amp; Tier-1 Regional Business Hubs</strong></td>
+              <td class="text-center">6 Assets</td>
+              <td class="text-center">893 Keys</td>
+              <td class="text-center">$20.97M &ndash; $9.03M</td>
+              <td class="text-center">6.70% &ndash; 9.10%</td>
+            </tr>
+            <tr>
+              <td><strong>Nearshoring, Industrial &amp; Select-Service Network</strong></td>
+              <td class="text-center">14 Assets</td>
+              <td class="text-center">1,749 Keys</td>
+              <td class="text-center">$8.72M &ndash; $3.40M</td>
+              <td class="text-center">7.20% &ndash; 10.40%</td>
+            </tr>
+            <tr style="background-color: #F1F5F9; font-weight: bold;">
+              <td>TOTAL CONSOLIDATED MASTER PORTFOLIO</td>
+              <td class="text-center">27 Assets</td>
+              <td class="text-center">5,112 Keys</td>
+              <td class="text-center">$2,284.7M USD</td>
+              <td class="text-center">Weighted Cap: 5.65%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="legal-notice">
+        <strong>Transaction &amp; Acquisition Protocol:</strong> All properties are subject to formal RFI sign-off. Detailed CIM dossiers, historical P&amp;L audits, and flag/operator transition frameworks are made available under executed Non-Disclosure Agreement (NDA). Direct repository access: Google Drive Central Folder[span_29](start_span)[span_29](end_span).
       </p>
     </div>
+    <footer class="page-footer">
+      <span>Royal Coast Properties</span>
+      <span>Institutional Hospitality Acquisitions</span>
+      <span>Page 14 of 14</span>
+    </footer>
+  </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <!-- Hoteles -->
-      <div onclick="seleccionarActivo('Hoteles')" class="group cursor-pointer rounded-2xl bg-slate-900 border border-slate-800 hover:border-teal-400/80 transition-all duration-300 overflow-hidden shadow-lg">
-        <div class="h-48 overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80" alt="Hoteles" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-        </div>
-        <div class="p-5 flex justify-between items-center bg-slate-900">
-          <div>
-            <h3 class="font-bold text-base text-white group-hover:text-teal-400 transition">Hoteles</h3>
-            <p class="text-xs text-slate-400">Boutique & Operación Hotelera</p>
-          </div>
-          <span class="text-teal-400 group-hover:translate-x-1 transition duration-300">→</span>
-        </div>
-      </div>
-
-      <!-- Centros Comerciales -->
-      <div onclick="seleccionarActivo('Centros Comerciales')" class="group cursor-pointer rounded-2xl bg-slate-900 border border-slate-800 hover:border-teal-400/80 transition-all duration-300 overflow-hidden shadow-lg">
-        <div class="h-48 overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1519567241046-7f570eee3ce6?auto=format&fit=crop&w=800&q=80" alt="Centros Comerciales" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-        </div>
-        <div class="p-5 flex justify-between items-center bg-slate-900">
-          <div>
-            <h3 class="font-bold text-base text-white group-hover:text-teal-400 transition">Centros Comerciales</h3>
-            <p class="text-xs text-slate-400">Plazas y locales comerciales</p>
-          </div>
-          <span class="text-teal-400 group-hover:translate-x-1 transition duration-300">→</span>
-        </div>
-      </div>
-
-      <!-- Terrenos -->
-      <div onclick="seleccionarActivo('Terrenos')" class="group cursor-pointer rounded-2xl bg-slate-900 border border-slate-800 hover:border-teal-400/80 transition-all duration-300 overflow-hidden shadow-lg">
-        <div class="h-48 overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80" alt="Terrenos" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-        </div>
-        <div class="p-5 flex justify-between items-center bg-slate-900">
-          <div>
-            <h3 class="font-bold text-base text-white group-hover:text-teal-400 transition">Terrenos</h3>
-            <p class="text-xs text-slate-400">Macrolotes y uso de suelo mixto</p>
-          </div>
-          <span class="text-teal-400 group-hover:translate-x-1 transition duration-300">→</span>
-        </div>
-      </div>
-
-      <!-- Residenciales -->
-      <div onclick="seleccionarActivo('Residenciales')" class="group cursor-pointer rounded-2xl bg-slate-900 border border-slate-800 hover:border-teal-400/80 transition-all duration-300 overflow-hidden shadow-lg">
-        <div class="h-48 overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Residenciales" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-        </div>
-        <div class="p-5 flex justify-between items-center bg-slate-900">
-          <div>
-            <h3 class="font-bold text-base text-white group-hover:text-teal-400 transition">Residenciales</h3>
-            <p class="text-xs text-slate-400">Comunidades y privadas planeadas</p>
-          </div>
-          <span class="text-teal-400 group-hover:translate-x-1 transition duration-300">→</span>
-        </div>
-      </div>
-
-      <!-- Casas -->
-      <div onclick="seleccionarActivo('Casas')" class="group cursor-pointer rounded-2xl bg-slate-900 border border-slate-800 hover:border-teal-400/80 transition-all duration-300 overflow-hidden shadow-lg">
-        <div class="h-48 overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=80" alt="Casas" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-        </div>
-        <div class="p-5 flex justify-between items-center bg-slate-900">
-          <div>
-            <h3 class="font-bold text-base text-white group-hover:text-teal-400 transition">Casas</h3>
-            <p class="text-xs text-slate-400">Villas y residencias exclusivas</p>
-          </div>
-          <span class="text-teal-400 group-hover:translate-x-1 transition duration-300">→</span>
-        </div>
-      </div>
-
-      <!-- Apartamentos -->
-      <div onclick="seleccionarActivo('Apartamentos')" class="group cursor-pointer rounded-2xl bg-slate-900 border border-slate-800 hover:border-teal-400/80 transition-all duration-300 overflow-hidden shadow-lg">
-        <div class="h-48 overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80" alt="Apartamentos" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-        </div>
-        <div class="p-5 flex justify-between items-center bg-slate-900">
-          <div>
-            <h3 class="font-bold text-base text-white group-hover:text-teal-400 transition">Apartamentos</h3>
-            <p class="text-xs text-slate-400">Condominios y penthouses</p>
-          </div>
-          <span class="text-teal-400 group-hover:translate-x-1 transition duration-300">→</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- LÓGICA JAVASCRIPT SIN DUPLICACIÓN DE TELÉFONO -->
-  <script>
-    // URL de la aplicación web de Google Apps Script:
-    const SCRIPT_URL = "URL_DE_TU_GOOGLE_APPS_SCRIPT_AQUI"; 
-    
-    // Número WhatsApp del broker:
-    const BROKER_WHATSAPP = "529842121805";
-
-    function seleccionarActivo(categoria) {
-      const select = document.getElementById('tipoActivo');
-      if (select) {
-        select.value = categoria;
-      }
-      const card = document.getElementById('contactCard');
-      card.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      
-      card.classList.add('ring-2', 'ring-teal-400');
-      setTimeout(() => card.classList.remove('ring-2', 'ring-teal-400'), 1200);
-    }
-
-    async function enviarFormulario(event) {
-      event.preventDefault();
-
-      const btn = document.getElementById('btnSubmit');
-      btn.innerText = "Registrando solicitud...";
-      btn.disabled = true;
-
-      const nombre = document.getElementById('nombre').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const codigoPais = document.getElementById('codigoPais').value.trim();
-      const numeroLimpio = document.getElementById('numeroTelefono').value.replace(/\D/g, ''); 
-      
-      // Una sola variable con el teléfono internacional completo:
-      const telefonoUnificado = `${codigoPais}${numeroLimpio}`;
-      const activo = document.getElementById('tipoActivo').value;
-
-      const payload = {
-        nombre: nombre,
-        email: email,
-        telefono: telefonoUnificado,
-        activo: activo
-      };
-
-      try {
-        if (SCRIPT_URL && SCRIPT_URL !== "URL_DE_TU_GOOGLE_APPS_SCRIPT_AQUI") {
-          await fetch(SCRIPT_URL, {
-            method: "POST",
-            mode: "no-cors",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(payload)
-          });
-        }
-
-        const mensajeWa = `Hola Selling Playa / Royal Coast, mi nombre es ${nombre}. Solicito información confidencial para la categoría: ${activo}. Mi correo es ${email} y mi contacto es ${telefonoUnificado}.`;
-        const linkWa = `https://wa.me/${BROKER_WHATSAPP}?text=${encodeURIComponent(mensajeWa)}`;
-
-        document.getElementById('whatsappBtn').href = linkWa;
-
-        document.getElementById('leadForm').classList.add('hidden');
-        document.getElementById('successState').classList.remove('hidden');
-
-      } catch (error) {
-        console.error("Error al registrar:", error);
-        alert("Ocurrió un error al procesar la información. Intenta de nuevo.");
-        btn.innerText = "Solicitar Registro y Ficha Confidencial";
-        btn.disabled = false;
-      }
-    }
-  </script>
 </body>
 </html>
